@@ -1,0 +1,4995 @@
+/* =========================================
+   GENERAL
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f8f3;
+    color: #20352a;
+}
+
+button {
+    font-family: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   FRONT / LANDING PAGE
+   ========================================= */
+
+.landing-page {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 15% 20%, rgba(112, 170, 122, .35), transparent 25%), radial-gradient(circle at 85% 80%, rgba(62, 115, 78, .30), transparent 30%), linear-gradient(135deg, #10291b, #1c4930 50%, #0b2116);
+    color: white;
+}
+
+.landing-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,.08) 1px, transparent 1px);
+    background-size: 35px 35px;
+}
+
+.landing-content {
+    position: relative;
+    z-index: 2;
+    width: min(850px, 90%);
+    text-align: center;
+}
+
+.landing-icon {
+    font-size: 65px;
+    margin-bottom: 10px;
+    animation: floatTree 3s ease-in-out infinite;
+}
+
+@keyframes floatTree {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.landing-small-title {
+    font-size: 13px;
+    letter-spacing: 3px;
+    opacity: .75;
+    margin-bottom: 25px;
+}
+
+.landing-content h1 {
+    margin: 0;
+    font-size: clamp(50px, 8vw, 95px);
+    line-height: .98;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+    .landing-content h1 span {
+        color: #9bd39e;
+    }
+
+.landing-description {
+    max-width: 650px;
+    margin: 30px auto;
+    font-size: 17px;
+    line-height: 1.8;
+    opacity: .86;
+}
+
+.get-started-btn {
+    border: none;
+    border-radius: 50px;
+    padding: 16px 30px;
+    background: white;
+    color: #174027;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 12px 35px rgba(0,0,0,.25);
+    transition: .3s;
+}
+
+    .get-started-btn span {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .get-started-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(0,0,0,.35);
+    }
+
+.landing-note {
+    margin-top: 30px;
+    font-size: 13px;
+    opacity: .6;
+}
+
+
+/* =========================================
+   MAIN WEBSITE
+   ========================================= */
+
+.main-website {
+    display: none;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.main-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 15px 35px;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #dce8dc;
+    box-shadow: 0 4px 20px rgba(35,70,45,.08);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+}
+
+.brand-icon {
+    font-size: 30px;
+}
+
+.navbar-brand strong {
+    display: block;
+    color: #1b4b2c;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+.navbar-brand small {
+    display: block;
+    color: #79917e;
+    font-size: 10px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-btn {
+    border: none;
+    background: transparent;
+    padding: 10px 13px;
+    border-radius: 9px;
+    color: #5b7060;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+    .nav-btn:hover {
+        background: #edf5ed;
+        color: #215b34;
+    }
+
+    .nav-btn.active {
+        background: #215b34;
+        color: white;
+        box-shadow: 0 5px 15px rgba(33,91,52,.2);
+    }
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.website-content {
+    width: min(1250px, 92%);
+    margin: auto;
+}
+
+.content-section {
+    display: none;
+    min-height: calc(100vh - 80px);
+    padding: 70px 0;
+}
+
+    .content-section.active-section {
+        display: block;
+        animation: sectionAppear .4s ease;
+    }
+
+@keyframes sectionAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   HOME
+   ========================================= */
+
+.hero-content {
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1.4fr .8fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.section-label {
+    margin: 0 0 10px;
+    color: #9bdd69;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-text h2 {
+    margin: 0;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.02;
+    color: #ffffff;
+}
+
+    .hero-text h2 span {
+        color: #8fdf63;
+    }
+
+.hero-description {
+    max-width: 680px;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.primary-btn {
+    border: none;
+    background: #215b34;
+    color: white;
+}
+
+.secondary-btn {
+    border: 1px solid #c8dacb;
+    background: white;
+    color: #285936;
+}
+
+    .primary-btn:hover,
+    .secondary-btn:hover {
+        transform: translateY(-3px);
+    }
+
+.hero-card {
+    padding: 35px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #e6f4e5, #f8fcf7);
+    border: 1px solid #9acb91;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.tree-illustration {
+    font-size: 120px;
+    padding: 25px 0;
+    animation: floatTree 4s ease-in-out infinite;
+}
+
+.hero-card h3 {
+    margin: 0;
+    font-size: 23px;
+    color: #174f2d;
+}
+
+.hero-card p {
+    color: #536b59;
+    line-height: 1.7;
+}
+
+.mini-progress {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #718176;
+}
+
+    .progress-info strong {
+        color: #397148;
+    }
+
+.progress-bar {
+    height: 8px;
+    margin-top: 8px;
+    border-radius: 20px;
+    background: #cbdcca;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 15%;
+    height: 100%;
+    border-radius: 20px;
+    background: #397148;
+}
+
+.quick-facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.fact-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    background: #f8fbf7;
+    border: 1px solid #b8d7b7;
+    border-radius: 15px;
+}
+
+    .fact-card > span {
+        font-size: 25px;
+    }
+
+    .fact-card small {
+        display: block;
+        color: #66806d;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .fact-card strong {
+        color: #174f2d;
+        font-size: 13px;
+    }
+.quote-box {
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    background: #e8f3e7;
+    border-radius: 20px;
+    border: 1px solid #9acb91;
+}
+
+.quote-icon {
+    font-size: 45px;
+    color: #4f9b55;
+}
+
+.quote-box p {
+    margin: 0;
+    font-size: 20px;
+    color: #174f2d;
+    font-weight: 600;
+}
+
+.quote-box small {
+    color: #66806d;
+}
+
+#home {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient( circle at 15% 20%, rgba(77, 150, 77, 0.18), transparent 32% ), radial-gradient( circle at 85% 75%, rgba(60, 130, 75, 0.14), transparent 35% ), linear-gradient( 135deg, #062615 0%, #08351e 50%, #052415 100% );
+}
+
+
+/* =========================================
+   SECTION HEADER
+   ========================================= */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 45px;
+}
+
+.section-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background: #215b34;
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 42px;
+    color: #183b25;
+}
+
+
+/* =========================================
+   INFORMATION CARDS
+   ========================================= */
+
+.info-grid,
+.science-grid,
+.feature-grid,
+.monitoring-cards,
+.sdg-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.info-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.info-card {
+    padding: 30px;
+    background: white;
+    border: 1px solid #e0eae1;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(40,80,45,.05);
+}
+
+.big-icon {
+    font-size: 42px;
+}
+
+.info-card h3 {
+    color: #285936;
+}
+
+.info-card p {
+    color: #66766b;
+    line-height: 1.8;
+}
+
+.placeholder-note {
+    padding: 12px;
+    background: #fff8df;
+    border-radius: 10px;
+    color: #806d35 !important;
+    font-size: 13px;
+}
+
+.about-feature {
+    margin-top: 25px;
+    padding: 25px;
+    background: #edf6ed;
+    border-radius: 18px;
+    border: 1px solid #d5e7d6;
+}
+
+    .about-feature h3 {
+        margin-top: 0;
+        color: #285936;
+    }
+
+    .about-feature p,
+    .about-feature li {
+        color: #617466;
+        line-height: 1.7;
+    }
+
+
+/* =========================================
+   SCIENCE
+   ========================================= */
+
+.science-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.science-card {
+    padding: 25px;
+    background: white;
+    border: 1px solid #e0eae1;
+    border-radius: 18px;
+}
+
+    .science-card span {
+        font-size: 35px;
+    }
+
+    .science-card h3 {
+        color: #285936;
+    }
+
+    .science-card p {
+        color: #68796d;
+        line-height: 1.7;
+    }
+
+.science-note,
+.references-box {
+    margin-top: 25px;
+    padding: 28px;
+    border-radius: 18px;
+}
+
+.science-note {
+    background: #e7f2e8;
+}
+
+.references-box {
+    background: white;
+    border: 1px solid #e0eae1;
+}
+
+    .science-note h3,
+    .references-box h3 {
+        color: #285936;
+    }
+
+    .science-note p,
+    .references-box p {
+        color: #66766b;
+        line-height: 1.7;
+    }
+
+
+/* =========================================
+   LOCATION
+   ========================================= */
+
+.location-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 25px;
+}
+
+.map-placeholder {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: 25px;
+    background: linear-gradient(rgba(221,239,224,.88), rgba(240,248,241,.94));
+    border: 2px dashed #a9c9ad;
+}
+
+.map-icon {
+    font-size: 65px;
+}
+
+.map-placeholder h3 {
+    font-size: 25px;
+    color: #285936;
+}
+
+.map-placeholder p,
+.map-placeholder span {
+    color: #708074;
+}
+
+.location-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.location-card {
+    padding: 25px;
+    background: white;
+    border-radius: 18px;
+    border: 1px solid #e0eae1;
+}
+
+    .location-card h3 {
+        color: #285936;
+    }
+
+    .location-card p {
+        color: #66766b;
+    }
+
+
+/* =========================================
+   MONITORING
+   ========================================= */
+
+.monitoring-intro {
+    padding: 20px 25px;
+    background: #e7f2e8;
+    border-radius: 15px;
+    color: #5f7265;
+}
+
+.monitoring-cards {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 25px;
+}
+
+.monitor-card {
+    padding: 28px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #e0eae1;
+}
+
+    .monitor-card > span:first-child {
+        font-size: 40px;
+    }
+
+    .monitor-card h3 {
+        margin-bottom: 3px;
+        color: #285936;
+    }
+
+    .monitor-card strong {
+        font-size: 10px;
+        letter-spacing: 1px;
+        color: #79917e;
+    }
+
+    .monitor-card p {
+        color: #68786d;
+        line-height: 1.7;
+    }
+
+.status {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 20px;
+    background: #fff5d8;
+    color: #806d35;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.measurement-box {
+    margin-top: 25px;
+    padding: 28px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #e0eae1;
+}
+
+    .measurement-box h3 {
+        color: #285936;
+    }
+
+.measurement-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+    .measurement-list span {
+        padding: 10px 14px;
+        background: #edf6ed;
+        border-radius: 10px;
+        color: #4e6955;
+        font-size: 12px;
+    }
+
+
+/* =========================================
+   WHY IT MATTERS
+   ========================================= */
+
+.matters-hero {
+    padding: 45px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #173d25, #316941);
+    color: white;
+}
+
+    .matters-hero h3 {
+        margin: 15px 0;
+        font-size: 38px;
+        line-height: 1.15;
+    }
+
+    .matters-hero p {
+        max-width: 700px;
+        color: rgba(255,255,255,.8);
+        line-height: 1.8;
+    }
+
+.sdg-grid {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 25px;
+}
+
+.sdg-card {
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #e0eae1;
+}
+
+    .sdg-card span {
+        font-size: 40px;
+    }
+
+    .sdg-card h3 {
+        margin-bottom: 3px;
+        color: #285936;
+    }
+
+    .sdg-card strong {
+        color: #62806a;
+    }
+
+    .sdg-card p {
+        color: #69796e;
+        line-height: 1.7;
+    }
+
+.call-to-action {
+    margin-top: 25px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background: #e7f2e8;
+}
+
+    .call-to-action h3 {
+        color: #285936;
+    }
+
+    .call-to-action p {
+        color: #637468;
+        line-height: 1.8;
+    }
+
+
+/* =========================================
+   FREE CHOICE FEATURE
+   ========================================= */
+
+.feature-hero {
+    padding: 45px;
+    text-align: center;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #e1f0e2, #f7fbf6);
+    border: 1px solid #cfe2d1;
+}
+
+.feature-icon {
+    font-size: 60px;
+}
+
+.feature-hero h3 {
+    font-size: 32px;
+    color: #285936;
+}
+
+.feature-hero p {
+    color: #68796d;
+}
+
+.feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 25px;
+}
+
+.feature-card {
+    padding: 25px;
+    background: white;
+    border: 1px solid #e0eae1;
+    border-radius: 18px;
+}
+
+    .feature-card span {
+        font-size: 35px;
+    }
+
+    .feature-card h3 {
+        color: #285936;
+    }
+
+    .feature-card p {
+        color: #68796d;
+        line-height: 1.7;
+    }
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 35px 6%;
+    background: #173d25;
+    color: white;
+}
+
+    .site-footer p {
+        margin: 5px 0;
+        color: rgba(255,255,255,.65);
+        font-size: 12px;
+    }
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .main-navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar-links {
+        justify-content: center;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-facts {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .science-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .location-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .monitoring-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .main-navbar {
+        padding: 12px 15px;
+    }
+
+    .navbar-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .nav-btn {
+        font-size: 11px;
+    }
+
+    .website-content {
+        width: 90%;
+    }
+
+    .content-section {
+        padding: 45px 0;
+    }
+
+    .hero-text h2 {
+        font-size: 42px;
+    }
+
+    .quick-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid,
+    .science-grid,
+    .sdg-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 30px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+    }
+
+    .landing-content h1 {
+        font-size: 55px;
+    }
+
+    .landing-description {
+        font-size: 14px;
+    }
+}
+/* =========================================
+   WHY I CHOSE THIS TREE
+   ========================================= */
+
+.story-introduction {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    margin-bottom: 35px;
+    background: linear-gradient(135deg, #e8f4e9, #f8fbf7);
+    border: 1px solid #d2e5d4;
+    border-radius: 22px;
+}
+
+.story-intro-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    background: white;
+    font-size: 40px;
+    box-shadow: 0 8px 20px rgba(40,80,45,.08);
+}
+
+.story-introduction h3 {
+    margin: 0 0 8px;
+    font-size: 25px;
+    color: #285936;
+}
+
+.story-introduction p {
+    margin: 0;
+    color: #68796d;
+    line-height: 1.8;
+}
+
+
+/* STUDENT STORIES */
+
+.student-stories {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.student-story {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    min-height: 450px;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #dfe9e0;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(40,80,45,.06);
+}
+
+.reverse-story {
+    grid-template-columns: 1.2fr .8fr;
+}
+
+    .reverse-story .story-photo {
+        order: 2;
+    }
+
+    .reverse-story .story-content {
+        order: 1;
+    }
+
+
+/* PHOTO AREA */
+
+.story-photo {
+    min-height: 420px;
+    padding: 25px;
+    background: linear-gradient(145deg, #dceedd, #eff7ef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px dashed #a9c9ad;
+    border-radius: 18px;
+    background: rgba(255,255,255,.45);
+    color: #5d7964;
+}
+
+    .photo-placeholder span {
+        font-size: 60px;
+        margin-bottom: 15px;
+    }
+
+    .photo-placeholder strong {
+        font-size: 16px;
+        color: #3d6547;
+    }
+
+    .photo-placeholder small {
+        margin-top: 6px;
+        color: #809286;
+        font-size: 11px;
+    }
+
+
+/* STORY CONTENT */
+
+.story-content {
+    padding: 45px;
+}
+
+.student-label {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #e8f3e9;
+    color: #4f8159;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.story-content h3 {
+    margin: 15px 0 3px;
+    font-size: 36px;
+    color: #214d2e;
+}
+
+.story-subtitle {
+    margin-top: 0;
+    color: #709078;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.story-text {
+    margin-top: 25px;
+}
+
+    .story-text p {
+        color: #65766a;
+        line-height: 1.8;
+    }
+
+        .story-text p:first-child {
+            color: #315f3c;
+        }
+
+
+/* TAGS */
+
+.story-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+    .story-tags span {
+        padding: 8px 11px;
+        background: #f0f6f0;
+        border-radius: 10px;
+        color: #607764;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+
+/* STORY QUESTIONS */
+
+.story-checklist {
+    margin-top: 35px;
+    padding: 35px;
+    background: #183d26;
+    border-radius: 25px;
+    color: white;
+}
+
+    .story-checklist h3 {
+        margin-top: 0;
+        font-size: 25px;
+    }
+
+.story-question-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+    .story-question-grid > div {
+        padding: 20px;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 15px;
+    }
+
+    .story-question-grid span {
+        display: block;
+        margin-bottom: 12px;
+        color: #9bd39e;
+        font-size: 12px;
+        font-weight: 800;
+    }
+
+    .story-question-grid strong {
+        display: block;
+        font-size: 14px;
+    }
+
+    .story-question-grid p {
+        color: rgba(255,255,255,.65);
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+
+/* OPTIONAL TIMELINE */
+
+.decision-timeline {
+    margin-top: 35px;
+    padding: 35px;
+    background: white;
+    border: 1px solid #dfe9e0;
+    border-radius: 25px;
+}
+
+.timeline-heading {
+    text-align: center;
+}
+
+    .timeline-heading h3 {
+        margin: 5px 0;
+        color: #285936;
+        font-size: 25px;
+    }
+
+    .timeline-heading p:last-child {
+        color: #708074;
+        line-height: 1.6;
+    }
+
+.timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.timeline-item {
+    text-align: center;
+    max-width: 150px;
+}
+
+    .timeline-item span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        margin: auto;
+        border-radius: 50%;
+        background: #e4f0e5;
+        color: #397148;
+        font-weight: 800;
+    }
+
+    .timeline-item strong {
+        display: block;
+        margin-top: 10px;
+        color: #315d3b;
+        font-size: 13px;
+    }
+
+    .timeline-item p {
+        color: #829087;
+        font-size: 10px;
+    }
+
+.timeline-line {
+    width: 70px;
+    height: 2px;
+    background: #d5e5d7;
+    margin: 0 10px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .student-story,
+    .reverse-story {
+        grid-template-columns: 1fr;
+    }
+
+        .reverse-story .story-photo,
+        .reverse-story .story-content {
+            order: initial;
+        }
+
+    .story-photo {
+        min-height: 320px;
+    }
+
+    .story-question-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .timeline {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .timeline-line {
+        width: 2px;
+        height: 35px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .story-introduction {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-content {
+        padding: 30px 25px;
+    }
+
+        .story-content h3 {
+            font-size: 30px;
+        }
+
+    .story-question-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-checklist,
+    .decision-timeline {
+        padding: 25px;
+    }
+}
+/* =========================================
+   WHY THIS TREE - STUDENT CARDS
+   ========================================= */
+
+.tree-story-intro {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    margin-bottom: 35px;
+    background: linear-gradient( 135deg, #e7f3e8, #f8fbf7 );
+    border: 1px solid #d2e5d4;
+    border-radius: 22px;
+}
+
+.tree-story-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 75px;
+    height: 75px;
+    background: white;
+    border-radius: 20px;
+    font-size: 40px;
+    box-shadow: 0 8px 20px rgba(40,80,45,.08);
+}
+
+.tree-story-intro h3 {
+    margin: 0 0 8px;
+    font-size: 25px;
+    color: #285936;
+}
+
+.tree-story-intro p {
+    margin: 0;
+    color: #68796d;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   STUDENT CARDS
+   ========================================= */
+
+.student-tree-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.student-tree-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid #dfe9e0;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(40,80,45,.08);
+    transition: .3s;
+}
+
+    .student-tree-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 18px 45px rgba(40,80,45,.14);
+    }
+
+
+/* =========================================
+   STUDENT PHOTO
+   ========================================= */
+
+.student-photo {
+    height: 330px;
+    padding: 18px;
+    background: linear-gradient( 145deg, #dceedd, #f1f8f1 );
+}
+
+.photo-placeholder-large {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px dashed #a9c9ad;
+    border-radius: 18px;
+    background: rgba(255,255,255,.45);
+    color: #5d7964;
+}
+
+    .photo-placeholder-large span {
+        font-size: 65px;
+        margin-bottom: 12px;
+    }
+
+    .photo-placeholder-large strong {
+        color: #3d6547;
+        font-size: 17px;
+    }
+
+    .photo-placeholder-large small {
+        margin-top: 7px;
+        color: #809286;
+        font-size: 11px;
+    }
+
+
+/* =========================================
+   ACTUAL IMAGE SUPPORT
+   ========================================= */
+
+.student-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+   ========================================= */
+
+.student-card-content {
+    padding: 28px 30px 32px;
+}
+
+.student-card-label {
+    margin: 0 0 8px;
+    color: #6c9874;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.student-card-content h3 {
+    margin: 0;
+    font-size: 32px;
+    color: #214d2e;
+}
+
+.student-card-content p:not(.student-card-label) {
+    color: #68796d;
+    line-height: 1.7;
+    min-height: 55px;
+}
+
+
+/* =========================================
+   EXPLORE BUTTON
+   ========================================= */
+
+.explore-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #215b34;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s;
+}
+
+    .explore-btn span {
+        margin-left: 8px;
+        font-size: 18px;
+    }
+
+    .explore-btn:hover {
+        background: #174727;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(33,91,52,.2);
+    }
+
+
+/* =========================================
+   STORY DETAIL PAGE
+   ========================================= */
+
+.tree-story-detail {
+    display: none;
+}
+
+    .tree-story-detail.active-story {
+        display: block;
+        animation: storyAppear .4s ease;
+    }
+
+@keyframes storyAppear {
+
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================
+   BACK BUTTON
+   ========================================= */
+
+.back-story-btn {
+    display: inline-block;
+    background: #2f6b3f;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-bottom: 20px;
+}
+
+    .back-story-btn:hover {
+        background: #245331;
+        transform: translateX(-2px);
+    }
+
+
+/* =========================================
+   STORY DETAIL HEADER
+   ========================================= */
+
+.story-detail-header {
+    margin: 35px 0;
+}
+
+    .story-detail-header h2 {
+        margin: 5px 0;
+        font-size: clamp(40px, 6vw, 65px);
+        color: #183b25;
+    }
+
+    .story-detail-header p:last-child {
+        margin: 0;
+        color: #6f8875;
+        font-size: 16px;
+    }
+
+
+/* =========================================
+   STORY DETAIL LAYOUT
+   ========================================= */
+
+.story-detail-layout {
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    gap: 35px;
+    padding: 30px;
+    background: white;
+    border: 1px solid #dfe9e0;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(40,80,45,.07);
+}
+
+
+/* =========================================
+   DETAIL PHOTO
+   ========================================= */
+
+.story-detail-photo {
+    min-height: 430px;
+    padding: 15px;
+    background: #eaf4eb;
+    border-radius: 20px;
+}
+
+.photo-placeholder-detail {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px dashed #a9c9ad;
+    border-radius: 16px;
+    color: #5d7964;
+}
+
+    .photo-placeholder-detail span {
+        font-size: 65px;
+        margin-bottom: 15px;
+    }
+
+    .photo-placeholder-detail strong {
+        color: #3d6547;
+        font-size: 17px;
+    }
+
+    .photo-placeholder-detail small {
+        margin-top: 7px;
+        color: #809286;
+    }
+
+
+/* Actual detail image */
+
+.story-detail-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+
+/* =========================================
+   STORY TEXT
+   ========================================= */
+
+.story-detail-content {
+    padding: 10px 15px;
+}
+
+    .story-detail-content h3 {
+        margin-top: 0;
+        color: #285936;
+        font-size: 27px;
+    }
+
+    .story-detail-content p {
+        color: #647469;
+        line-height: 1.9;
+        font-size: 15px;
+    }
+
+
+/* =========================================
+   STORY TAGS
+   ========================================= */
+
+.story-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+    .story-detail-tags span {
+        padding: 9px 12px;
+        border-radius: 10px;
+        background: #edf6ed;
+        color: #52715a;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+
+/* =========================================
+   BOTTOM REFLECTION
+   ========================================= */
+
+.story-bottom-box {
+    margin-top: 25px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #183d26;
+    color: white;
+}
+
+    .story-bottom-box h3 {
+        margin-top: 0;
+        color: #a8d5ac;
+    }
+
+    .story-bottom-box p {
+        margin-bottom: 0;
+        color: rgba(255,255,255,.72);
+        line-height: 1.8;
+    }
+
+.bottom-back {
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .student-tree-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .story-detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .story-detail-photo {
+        min-height: 300px;
+    }
+
+    .photo-placeholder-detail {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .tree-story-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .student-photo {
+        height: 280px;
+    }
+
+    .student-card-content {
+        padding: 25px;
+    }
+
+    .story-detail-layout {
+        padding: 18px;
+    }
+}
+/* =========================================================
+   SECTION 3 — SCIENCE BEHIND THE TREE
+   ========================================================= */
+
+.science-section {
+    padding: 80px 7%;
+    background: #f6faf7;
+    min-height: 100vh;
+}
+
+
+/* SECTION HEADING */
+
+.section-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 55px;
+}
+
+.section-number {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-size: 2.7rem;
+    margin: 0 0 15px;
+}
+
+.section-heading p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* TREE CARDS */
+
+.science-tree-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.science-tree-card {
+    background: white;
+    border-radius: 24px;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+    border: 1px solid #e5eee7;
+}
+
+    .science-tree-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.11);
+    }
+
+.science-icon {
+    width: 85px;
+    height: 85px;
+    min-width: 85px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.7rem;
+    background: #edf7ef;
+}
+
+.science-card-content {
+    flex: 1;
+}
+
+.science-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.science-card-content h3 {
+    margin: 8px 0;
+    font-size: 1.5rem;
+}
+
+.science-card-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* VIEW BUTTON */
+
+.science-view-btn {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.25s ease;
+}
+
+    .science-view-btn:hover {
+        transform: translateX(4px);
+    }
+
+
+/* DETAIL PAGE */
+
+.science-detail-page {
+    display: none;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+    .science-detail-page.active-science {
+        display: block;
+    }
+
+
+/* BACK BUTTON */
+
+..back-science-btn {
+    display: inline-block;
+    background: #2f6b3f;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.back-science-btn:hover {
+    background: #245331;
+    transform: translateX(-2px);
+}
+
+
+/* DETAIL HEADER */
+
+.science-detail-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+    .science-detail-header span {
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .science-detail-header h2 {
+        font-size: 2.6rem;
+        margin: 10px 0;
+    }
+
+    .science-detail-header p {
+        font-size: 1rem;
+    }
+
+
+/* INFORMATION CARDS */
+
+.science-info-card {
+    background: white;
+    padding: 32px;
+    border-radius: 22px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5eee7;
+}
+
+    .science-info-card h3 {
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 1.45rem;
+    }
+
+
+/* SPECIES PROFILE */
+
+.science-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+    .science-info-grid div {
+        background: #f6faf7;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .science-info-grid strong {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 0.85rem;
+    }
+
+    .science-info-grid p {
+        margin: 0;
+    }
+
+
+/* BIOLOGY / ECOLOGY FACTS */
+
+.science-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+    .science-facts div {
+        background: #f6faf7;
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .science-facts strong {
+        display: block;
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+
+    .science-facts span {
+        line-height: 1.5;
+    }
+
+
+/* BENEFITS */
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.benefit-item {
+    background: #f6faf7;
+    padding: 22px;
+    border-radius: 17px;
+}
+
+    .benefit-item > span {
+        font-size: 2rem;
+    }
+
+    .benefit-item h4 {
+        margin: 12px 0 7px;
+    }
+
+    .benefit-item p {
+        line-height: 1.55;
+        margin: 0;
+    }
+
+
+/* PHOTOSYNTHESIS */
+
+.photosynthesis-card {
+    overflow: hidden;
+}
+
+.photosynthesis-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+    .photosynthesis-flow div {
+        background: #f6faf7;
+        padding: 20px;
+        border-radius: 16px;
+        text-align: center;
+        min-width: 100px;
+        font-size: 1.5rem;
+    }
+
+    .photosynthesis-flow strong {
+        display: block;
+        font-size: 0.85rem;
+        margin-top: 8px;
+    }
+
+    .photosynthesis-flow > span {
+        font-size: 1.5rem;
+    }
+
+
+/* REFERENCES */
+
+.reference-note {
+    line-height: 1.6;
+}
+
+.references-list {
+    background: #f6faf7;
+    padding: 20px 25px;
+    border-radius: 15px;
+}
+
+    .references-list p {
+        line-height: 1.7;
+        margin: 10px 0;
+    }
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .science-tree-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .science-facts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .science-section {
+        padding: 60px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .science-tree-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .science-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .science-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .science-detail-header h2 {
+        font-size: 2rem;
+    }
+}
+/* =========================
+   SECTION 4 - LOCATION
+   ========================= */
+
+.location-intro {
+    max-width: 850px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+    .location-intro p {
+        color: #666;
+        line-height: 1.7;
+    }
+
+
+/* MAP CARD */
+
+.location-map-card {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.map-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.map-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #4f7d55;
+}
+
+.map-title h3 {
+    margin: 5px 0 0;
+    font-size: 24px;
+}
+
+.map-status {
+    background: #e8f5e9;
+    color: #2f6b3f;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ACTUAL MAP */
+
+#treeMap {
+    width: 100%;
+    height: 450px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+
+/* TREE LOCATION CARDS */
+
+.tree-location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.tree-location-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.tree-location-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tree-location-icon {
+    width: 50px;
+    height: 50px;
+    background: #e8f5e9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.tree-location-header span {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    color: #6c8b70;
+    font-weight: 700;
+}
+
+.tree-location-header h3 {
+    margin: 3px 0 0;
+    font-size: 22px;
+}
+
+
+/* LOCATION INFORMATION */
+
+.location-info p {
+    line-height: 1.6;
+    color: #666;
+    margin: 15px 0;
+}
+
+.location-info strong {
+    color: #333;
+}
+
+
+/* ENVIRONMENT BOX */
+
+.environment-box {
+    background: #f4f8f4;
+    border-left: 4px solid #4f7d55;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+    .environment-box h4 {
+        margin: 0 0 8px;
+        color: #2f6b3f;
+    }
+
+    .environment-box p {
+        margin: 0;
+        color: #666;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+
+
+/* SITE PHOTOS */
+
+.site-photos-section {
+    margin: 40px 0;
+}
+
+.site-photos-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+    .site-photos-heading h3 {
+        font-size: 25px;
+        margin: 8px 0;
+    }
+
+    .site-photos-heading p {
+        color: #777;
+    }
+
+.site-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.site-photo-placeholder {
+    min-height: 220px;
+    background: #f3f5f3;
+    border: 2px dashed #b9c8ba;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+    .site-photo-placeholder > div {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    .site-photo-placeholder h4 {
+        margin: 5px 0;
+    }
+
+    .site-photo-placeholder p {
+        color: #888;
+        margin: 5px 0;
+    }
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .tree-location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    #treeMap {
+        height: 350px;
+    }
+}
+/* =========================================
+   INTERACTIVE TREE LOCATION MAP
+   ========================================= */
+
+.tree-map-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #c9dfcf;
+    background: #e8f3eb;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+#treeMap {
+    width: 100%;
+    height: 100%;
+}
+/* =========================================
+   MONITORING LOG
+   ========================================= */
+
+.monitoring-header-description {
+    margin-top: 8px;
+    color: #65756a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   TREE MONITORING CARD
+   ========================================= */
+
+.tree-monitoring-card {
+    background: #ffffff;
+    border: 1px solid #dce7df;
+    border-radius: 18px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 6px 18px rgba(28, 68, 43, 0.06);
+}
+
+
+/* =========================================
+   CARD HEADER
+   ========================================= */
+
+.monitoring-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5ece7;
+}
+
+
+.monitoring-tree-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #eaf5ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+
+.monitoring-student-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #5b8066;
+    margin-bottom: 3px;
+}
+
+
+.monitoring-card-header h3 {
+    margin: 0;
+    color: #174f2d;
+    font-size: 21px;
+}
+
+
+.monitoring-card-header p {
+    margin: 4px 0 0;
+    color: #718078;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TREE SUMMARY
+   ========================================= */
+
+.monitoring-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+
+    .monitoring-summary > div {
+        background: #f5faf6;
+        border: 1px solid #e0ebe3;
+        border-radius: 12px;
+        padding: 14px;
+    }
+
+
+    .monitoring-summary span {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 7px;
+    }
+
+
+    .monitoring-summary small {
+        display: block;
+        color: #718078;
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+
+
+    .monitoring-summary strong {
+        display: block;
+        color: #214f31;
+        font-size: 13px;
+    }
+
+
+/* =========================================
+   MONITORING TABLE
+   ========================================= */
+
+.monitoring-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #dfe8e1;
+    border-radius: 12px;
+}
+
+
+.tree-monitoring-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+
+    .tree-monitoring-table th {
+        background: #edf6ef;
+        color: #245b35;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: left;
+        padding: 13px 14px;
+        border-bottom: 1px solid #d9e5dc;
+        white-space: nowrap;
+    }
+
+
+    .tree-monitoring-table td {
+        padding: 14px;
+        border-bottom: 1px solid #edf1ee;
+        color: #526158;
+        font-size: 13px;
+        vertical-align: middle;
+    }
+
+
+    .tree-monitoring-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+
+    .tree-monitoring-table tbody tr:hover {
+        background: #f8fbf9;
+    }
+
+
+    .tree-monitoring-table td strong {
+        display: block;
+        color: #244d31;
+        font-size: 13px;
+    }
+
+
+    .tree-monitoring-table td small {
+        display: block;
+        color: #89958d;
+        font-size: 10px;
+        margin-top: 3px;
+    }
+
+
+/* =========================================
+   STATUS
+   ========================================= */
+
+.monitor-status {
+    display: inline-block;
+    background: #f2f5f3;
+    color: #68756d;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   WHAT WE TRACK
+   ========================================= */
+
+.monitoring-info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-top: 24px;
+    padding: 22px;
+    background: #eef7f0;
+    border: 1px solid #d5e6d8;
+    border-radius: 16px;
+}
+
+
+.monitoring-info-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 12px;
+    font-size: 23px;
+}
+
+
+.monitoring-info-box h3 {
+    margin: 0 0 5px;
+    color: #1b5730;
+    font-size: 18px;
+}
+
+
+.monitoring-info-box p {
+    margin: 0;
+    color: #627067;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   TRACKING TAGS
+   ========================================= */
+
+.tracking-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+
+    .tracking-tags span {
+        background: #ffffff;
+        border: 1px solid #d7e5da;
+        color: #41604b;
+        padding: 7px 11px;
+        border-radius: 20px;
+        font-size: 11px;
+    }
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .tree-monitoring-card {
+        padding: 18px;
+    }
+
+
+    .monitoring-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .monitoring-info-box {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .monitoring-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .monitoring-card-header h3 {
+        font-size: 18px;
+    }
+}
+```css
+/* =========================================
+   SECTION 6 - WHY IT MATTERS
+   ========================================= */
+.matters-hero {
+    background: linear-gradient(135deg, #eef8ee, #f8fbf6);
+    border-radius: 24px;
+    padding: 50px;
+    margin-bottom: 35px;
+    border: 1px solid #dcebdc;
+}
+
+.matters-hero-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.matters-hero .big-icon {
+    font-size: 60px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.matters-hero h3 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.matters-hero p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+
+/* ENVIRONMENTAL DATA */
+
+.impact-data,
+.sdg-section,
+.project-impact {
+    margin-top: 45px;
+}
+
+.impact-title {
+    margin-bottom: 25px;
+}
+
+    .impact-title h3 {
+        font-size: 28px;
+        margin: 5px 0 10px;
+    }
+
+    .impact-title > p:last-child {
+        max-width: 800px;
+        line-height: 1.7;
+    }
+
+
+/* DATA CARDS */
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.impact-card {
+    background: #ffffff;
+    border: 1px solid #e2e8e2;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.impact-icon {
+    font-size: 38px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.impact-card h4 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.impact-card p {
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* SDG CARDS */
+
+.sdg-section {
+    background: #f8faf7;
+    border-radius: 24px;
+    padding: 35px;
+}
+
+.sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.sdg-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #e1e8e1;
+}
+
+.sdg-icon {
+    font-size: 42px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sdg-card h3 {
+    font-size: 30px;
+    margin: 0 0 5px;
+}
+
+.sdg-card > strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.sdg-card p {
+    line-height: 1.7;
+}
+
+.sdg-connection {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #f1f7f0;
+}
+
+    .sdg-connection strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .sdg-connection span {
+        line-height: 1.6;
+    }
+
+
+/* ACTION CARDS */
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.action-card {
+    background: #ffffff;
+    border: 1px solid #e2e8e2;
+    border-radius: 18px;
+    padding: 25px;
+    text-align: center;
+}
+
+    .action-card span {
+        font-size: 35px;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .action-card h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .action-card p {
+        line-height: 1.6;
+        margin: 0;
+    }
+
+
+/* CALL TO ACTION */
+
+.call-to-action {
+    margin-top: 45px;
+    padding: 40px;
+    border-radius: 22px;
+    text-align: center;
+    background: linear-gradient(135deg, #eef7ed, #f8fbf7);
+    border: 1px solid #dcebdc;
+}
+
+.cta-icon {
+    font-size: 42px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.call-to-action h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.call-to-action p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+.cta-highlight {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: white;
+    border: 1px solid #d8e6d8;
+}
+
+
+/* SOURCES */
+
+.matters-sources {
+    margin-top: 40px;
+    padding: 25px;
+    border-top: 1px solid #dfe7df;
+}
+
+    .matters-sources h3 {
+        margin-bottom: 15px;
+    }
+
+    .matters-sources p {
+        line-height: 1.7;
+        margin: 8px 0;
+    }
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sdg-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .action-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .matters-hero {
+        padding: 30px 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sdg-section {
+        padding: 25px 18px;
+    }
+
+    .matters-hero h3 {
+        font-size: 25px;
+    }
+}
+
+```
+/* =========================================
+   SECTION 7 - TREE GROWTH DASHBOARD
+   ========================================= */
+.feature-hero {
+    text-align: center;
+    padding: 45px 30px;
+    background: linear-gradient(135deg, #eef8ee, #f8fbf6);
+    border-radius: 24px;
+    border: 1px solid #dcebdc;
+    margin-bottom: 30px;
+}
+
+.feature-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.feature-hero h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.feature-hero p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+
+/* TREE SELECTOR */
+
+.tree-selector {
+    background: #ffffff;
+    border: 1px solid #e1e8e1;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+    .tree-selector h3 {
+        margin-bottom: 18px;
+    }
+
+.tree-selector-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tree-select-btn {
+    border: 1px solid #d5e2d5;
+    background: #f7faf6;
+    padding: 13px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+    .tree-select-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .tree-select-btn.active {
+        background: #234d32;
+        color: white;
+        border-color: #234d32;
+    }
+
+
+/* DASHBOARD */
+
+.dashboard-content {
+    display: none;
+}
+
+    .dashboard-content.active-dashboard {
+        display: block;
+    }
+
+.dashboard-title {
+    margin-bottom: 25px;
+}
+
+    .dashboard-title h3 {
+        font-size: 28px;
+        margin: 5px 0 10px;
+    }
+
+    .dashboard-title p:last-child {
+        line-height: 1.7;
+    }
+
+
+/* SUMMARY */
+
+.growth-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.growth-stat {
+    background: white;
+    border: 1px solid #e1e8e1;
+    border-radius: 18px;
+    padding: 22px;
+    text-align: center;
+}
+
+    .growth-stat span {
+        display: block;
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+
+    .growth-stat small {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .growth-stat strong {
+        display: block;
+        font-size: 23px;
+    }
+
+
+/* CHART */
+
+.growth-chart-card {
+    background: white;
+    border: 1px solid #e1e8e1;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .chart-header h3 {
+        margin: 5px 0 0;
+    }
+
+    .chart-header > span {
+        font-size: 14px;
+        opacity: 0.7;
+    }
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 330px;
+}
+
+
+/* PHOTO TIMELINE */
+
+.photo-timeline {
+    background: #f8faf7;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline-title {
+    margin-bottom: 20px;
+}
+
+    .timeline-title h3 {
+        font-size: 25px;
+        margin: 5px 0;
+    }
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.timeline-photo {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #e0e8e0;
+}
+
+.photo-placeholder {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef3ed;
+    border-radius: 12px;
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.timeline-photo strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.timeline-photo span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .growth-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .growth-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-hero {
+        padding: 30px 20px;
+    }
+
+        .feature-hero h3 {
+            font-size: 25px;
+        }
+
+    .chart-container {
+        height: 250px;
+    }
+}
+/* =========================================
+   OPENING LANDING PAGE
+   TEJADA & FABITO TREE PLANTING PROJECT
+   ========================================= */
+
+.landing-page {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    overflow: hidden;
+    z-index: 9999;
+    background: #102b19;
+}
+
+
+/* =========================================
+   BACKGROUND
+   ========================================= */
+
+.landing-background {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* EACH PERSON */
+
+.person-photo {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+    .person-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+    }
+
+
+/* LEFT - FABITO */
+
+.person-left {
+    left: 0;
+}
+
+
+/* RIGHT - TEJADA */
+
+.person-right {
+    right: 0;
+}
+
+
+/* =========================================
+   DARK GREEN OVERLAY
+   ========================================= */
+
+.landing-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( 90deg, rgba(5, 25, 13, 0.65) 0%, rgba(5, 25, 13, 0.35) 30%, rgba(5, 25, 13, 0.80) 50%, rgba(5, 25, 13, 0.35) 70%, rgba(5, 25, 13, 0.65) 100% );
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.landing-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+/* SMALL TITLE */
+
+.landing-small-title {
+    font-size: 15px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+
+/* =========================================
+   MAIN TITLE
+   ========================================= */
+
+.landing-content h1 {
+    margin: 0;
+    font-size: clamp(42px, 5vw, 76px);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+    .landing-content h1 span {
+        display: block;
+        color: #a6df75;
+        margin-top: 8px;
+    }
+
+
+/* =========================================
+   TAGLINE
+   ========================================= */
+
+.landing-tagline {
+    margin: 25px 0 30px;
+    font-size: clamp(18px, 2vw, 27px);
+    font-style: italic;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================
+   VALUES
+   ========================================= */
+
+.landing-values {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 30px;
+}
+
+
+.landing-value {
+    min-width: 120px;
+    padding: 0 22px;
+    border-right: 1px solid rgba(255, 255, 255, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+    .landing-value:last-child {
+        border-right: none;
+    }
+
+
+    .landing-value span {
+        font-size: 28px;
+        margin-bottom: 7px;
+    }
+
+
+    .landing-value strong {
+        font-size: 12px;
+        letter-spacing: 2px;
+        line-height: 1.4;
+    }
+
+
+/* =========================================
+   GET STARTED BUTTON
+   ========================================= */
+
+.landing-start-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 17px 35px;
+    border-radius: 50px;
+    border: 2px solid #8fd66b;
+    background: rgba(55, 135, 61, 0.85);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+    .landing-start-btn:hover {
+        transform: translateY(-3px);
+        background: rgba(72, 157, 76, 0.95);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+
+    .landing-start-btn .arrow {
+        font-size: 25px;
+        line-height: 1;
+    }
+
+
+/* =========================================
+   FOOTER TEXT
+   ========================================= */
+
+.landing-footer {
+    position: absolute;
+    bottom: 28px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   DECORATIVE LEAVES
+   ========================================= */
+
+.leaf-decoration {
+    position: absolute;
+    z-index: 5;
+    color: #9ddd72;
+    opacity: 0.8;
+    font-size: 65px;
+    pointer-events: none;
+}
+
+
+.leaf-top-left {
+    top: 20px;
+    left: 25px;
+    transform: rotate(-25deg);
+}
+
+
+.leaf-bottom-right {
+    right: 25px;
+    bottom: 50px;
+    transform: rotate(20deg);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .person-photo {
+        width: 50%;
+    }
+
+        .person-photo img {
+            object-position: center top;
+        }
+
+    .landing-content {
+        padding: 20px;
+    }
+
+    .landing-small-title {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .landing-content h1 {
+        font-size: 42px;
+    }
+
+    .landing-tagline {
+        font-size: 17px;
+    }
+
+    .landing-value {
+        min-width: 80px;
+        padding: 0 10px;
+    }
+
+        .landing-value span {
+            font-size: 22px;
+        }
+
+        .landing-value strong {
+            font-size: 9px;
+            letter-spacing: 1px;
+        }
+}
+
+
+/* =========================================
+   SMALL PHONE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .landing-page {
+        min-height: 600px;
+    }
+
+    /*
+       Make the people slightly darker
+       so the center text stays readable.
+    */
+
+    .landing-overlay {
+        background: linear-gradient( 90deg, rgba(5, 25, 13, 0.72), rgba(5, 25, 13, 0.88), rgba(5, 25, 13, 0.72) );
+    }
+
+
+    .landing-small-title {
+        margin-bottom: 12px;
+    }
+
+
+    .landing-content h1 {
+        font-size: 34px;
+    }
+
+
+    .landing-tagline {
+        margin: 15px 0 20px;
+        font-size: 15px;
+    }
+
+
+    .landing-values {
+        margin-bottom: 22px;
+    }
+
+
+    .landing-value {
+        min-width: auto;
+        padding: 0 7px;
+    }
+
+
+        .landing-value span {
+            font-size: 19px;
+        }
+
+
+        .landing-value strong {
+            font-size: 7px;
+        }
+
+
+    .landing-start-btn {
+        padding: 14px 25px;
+        font-size: 12px;
+    }
+
+
+    .landing-footer {
+        bottom: 15px;
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+
+    .leaf-decoration {
+        font-size: 40px;
+    }
+}
+/* =========================================================
+   NEW OPENING PAGE
+   TEJADA & FABITO TREE PLANTING PROJECT
+   ========================================================= */
+
+.new-landing {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    overflow: hidden;
+    z-index: 99999;
+    background: #102b18;
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.landing-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}}
+
+
+/* =========================================================
+   DARK OVERLAY
+   ========================================================= */
+
+.landing-dark-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( 90deg, rgba(4, 25, 13, 0.38), rgba(4, 25, 13, 0.60), rgba(4, 25, 13, 0.38) );
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CENTER CONTENT
+   ========================================================= */
+
+.new-landing-content {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TEJADA & FABITO
+   ========================================================= */
+
+.landing-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+}
+
+    .landing-name span {
+        display: block;
+        width: 100px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+.new-landing-content h1 {
+    margin: 0;
+    font-size: clamp(45px, 5.2vw, 78px);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+    .new-landing-content h1 strong {
+        display: block;
+        margin-top: 5px;
+        color: #9fe06b;
+        font-weight: 800;
+    }
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.landing-subtitle {
+    margin: 22px 0 5px;
+    font-size: clamp(18px, 2vw, 28px);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
+}
+
+
+/* =========================================================
+   GREEN LINE
+   ========================================================= */
+
+.landing-green-line {
+    width: 300px;
+    max-width: 45vw;
+    height: 4px;
+    margin: 8px 0 25px;
+    border-radius: 50%;
+    background: #9fe06b;
+    transform: rotate(-1deg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   VALUES
+   ========================================================= */
+
+.landing-values {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+
+.landing-value {
+    min-width: 125px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.45);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.35;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+    .landing-value:last-child {
+        border-right: none;
+    }
+
+
+.value-icon {
+    font-size: 27px;
+    margin-bottom: 6px;
+}
+
+
+/* =========================================================
+   GET STARTED BUTTON
+   ========================================================= */
+
+.new-get-started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    min-width: 285px;
+    padding: 17px 30px;
+    border: 2px solid #9fe06b;
+    border-radius: 50px;
+    background: rgba(45, 112, 53, 0.88);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+    .new-get-started:hover {
+        transform: translateY(-3px);
+        background: rgba(63, 142, 70, 0.95);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    }
+
+
+.start-arrow {
+    font-size: 25px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   BOTTOM TEXT
+   ========================================================= */
+
+.landing-bottom-text {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+    .landing-bottom-text span {
+        width: 75px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+
+/* =========================================================
+   DECORATIVE LEAVES
+   ========================================================= */
+
+.landing-leaf {
+    position: absolute;
+    z-index: 4;
+    color: #9fe06b;
+    font-size: 65px;
+    opacity: 0.8;
+    pointer-events: none;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+}
+
+
+.leaf-one {
+    top: 20px;
+    left: 20px;
+    transform: rotate(-25deg);
+}
+
+
+.leaf-two {
+    right: 20px;
+    bottom: 55px;
+    transform: rotate(20deg);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .landing-name {
+        font-size: 13px;
+        letter-spacing: 5px;
+    }
+
+        .landing-name span {
+            width: 60px;
+        }
+
+    .new-landing-content h1 {
+        font-size: 48px;
+    }
+
+    .landing-values {
+        transform: scale(0.9);
+    }
+
+    .landing-value {
+        min-width: 100px;
+        padding: 0 12px;
+    }
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .new-landing {
+        min-height: 600px;
+    }
+
+
+    .landing-bg {
+        background-position: center center;
+    }
+
+
+    .landing-dark-overlay {
+        background: linear-gradient( 90deg, rgba(4, 25, 13, 0.60), rgba(4, 25, 13, 0.78), rgba(4, 25, 13, 0.60) );
+    }
+
+
+    .new-landing-content {
+        padding: 20px 12px;
+    }
+
+
+    .landing-name {
+        gap: 10px;
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+    }
+
+
+        .landing-name span {
+            width: 35px;
+        }
+
+
+    .new-landing-content h1 {
+        font-size: 34px;
+        letter-spacing: 1px;
+    }
+
+
+    .landing-subtitle {
+        margin: 15px 0 5px;
+        font-size: 15px;
+    }
+
+
+    .landing-green-line {
+        width: 180px;
+        margin-bottom: 18px;
+    }
+
+
+    .landing-values {
+        width: 100%;
+        transform: scale(0.82);
+        margin-bottom: 12px;
+    }
+
+
+    .landing-value {
+        min-width: 0;
+        flex: 1;
+        padding: 0 5px;
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+
+    .value-icon {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+
+
+    .new-get-started {
+        min-width: 220px;
+        padding: 13px 20px;
+        font-size: 11px;
+        gap: 12px;
+    }
+
+
+    .start-arrow {
+        font-size: 20px;
+    }
+
+
+    .landing-bottom-text {
+        bottom: 14px;
+        gap: 8px;
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+
+
+        .landing-bottom-text span {
+            width: 25px;
+        }
+
+
+    .landing-leaf {
+        font-size: 35px;
+    }
+}/* =========================================================
+   GALLERY SECTION
+   ========================================================= */
+
+.gallery-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #062615;
+    padding: 70px 30px 50px;
+    box-sizing: border-box;
+}
+
+
+/* BACKGROUND */
+
+.gallery-background {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(77, 150, 77, 0.28),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #082c19,
+            #03180d 55%,
+            #092d19
+        );
+
+    z-index: 0;
+}
+
+
+/* CONTENT */
+
+.gallery-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* HEADER */
+
+.gallery-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 45px;
+}
+
+
+.gallery-title-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+
+.gallery-title-line span:not(.gallery-leaf-icon) {
+    width: 80px;
+    height: 2px;
+    background: #9bdd69;
+}
+
+
+.gallery-leaf-icon {
+    font-size: 35px;
+}
+
+
+.gallery-label {
+    margin: 12px 0 0;
+
+    color: #a7df78;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+.gallery-header h2 {
+    margin: 5px 0;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: white;
+
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.gallery-header h3 {
+    margin: 5px 0 15px;
+
+    color: #91d86b;
+
+    font-size: clamp(18px, 2vw, 26px);
+}
+
+
+.gallery-description {
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.85);
+
+    font-size: 15px;
+}
+
+
+/* STUDENT CARD */
+
+.student-gallery-card {
+    display: grid;
+
+    grid-template-columns: 270px 1fr;
+
+    gap: 25px;
+
+    padding: 18px;
+
+    margin-bottom: 28px;
+
+    border: 1px solid rgba(137, 218, 104, 0.55);
+
+    border-radius: 18px;
+
+    background: rgba(2, 31, 17, 0.78);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* STUDENT INFO */
+
+.student-gallery-info {
+    padding: 20px;
+
+    color: white;
+}
+
+
+.student-gallery-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #8ed366;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.student-label {
+    margin: 0;
+
+    color: #8fd66a;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.student-gallery-info h3 {
+    margin: 4px 0 15px;
+
+    font-size: 28px;
+}
+
+
+.student-divider {
+    height: 1px;
+
+    background: rgba(255,255,255,0.5);
+
+    margin-bottom: 20px;
+}
+
+
+.student-detail {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+.student-detail > span {
+    font-size: 25px;
+}
+
+
+.student-detail small {
+    display: block;
+
+    color: #8ed366;
+
+    font-weight: 700;
+
+    margin-bottom: 3px;
+}
+
+
+.student-detail strong {
+    display: block;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+/* PHOTO TIMELINE */
+
+.photo-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    align-items: start;
+}
+
+.gallery-photo-card {
+    overflow: hidden;
+    border: 1px solid rgba(142, 211, 102, 0.45);
+    border-radius: 12px;
+    background: rgba(4, 42, 22, 0.9);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.gallery-photo-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.35);
+}
+
+
+/* PHOTO */
+
+.gallery-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    overflow: hidden;
+    background: #163d26;
+}
+
+
+    .gallery-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
+/* PLACEHOLDER */
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    min-height: 170px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    color: rgba(255,255,255,0.65);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(41, 94, 52, 0.6),
+            rgba(8, 35, 19, 0.9)
+        );
+
+    font-size: 35px;
+}
+
+
+.photo-placeholder span {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+
+/* PHOTO INFORMATION */
+
+.photo-info {
+    padding: 8px 12px;
+    color: white;
+}
+
+
+    .photo-info strong {
+        display: block;
+        color: #b9e58e;
+        font-size: 11px;
+        letter-spacing: 0.8px;
+    }
+
+
+    .photo-info span {
+        display: block;
+        margin-top: 3px;
+        color: rgba(255,255,255,0.7);
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+
+/* DECORATIVE LEAVES */
+
+.gallery-leaf {
+    position: absolute;
+
+    z-index: 1;
+
+    color: #83c95d;
+
+    font-size: 90px;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+
+.gallery-leaf-left {
+    top: 100px;
+    left: -20px;
+
+    transform: rotate(-25deg);
+}
+
+
+.gallery-leaf-right {
+    top: 110px;
+    right: -20px;
+
+    transform: rotate(25deg);
+}
+
+
+/* BOTTOM */
+
+.gallery-bottom {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 45px;
+
+    color: white;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+}
+
+
+.gallery-bottom span {
+    width: 80px;
+    height: 1px;
+
+    background: rgba(255,255,255,0.7);
+}
+
+
+.gallery-bottom b {
+    color: #9bdd69;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .gallery-section {
+        padding: 50px 15px 35px;
+    }
+
+
+    .student-gallery-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .student-gallery-info {
+        padding-bottom: 5px;
+    }
+
+
+    .photo-timeline {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-photo {
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .gallery-bottom {
+        font-size: 8px;
+        letter-spacing: 2px;
+        gap: 8px;
+    }
+
+
+    .gallery-bottom span {
+        width: 30px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .gallery-header h2 {
+        font-size: 42px;
+    }
+
+
+    .gallery-description {
+        font-size: 13px;
+    }
+
+
+    .student-gallery-info h3 {
+        font-size: 24px;
+    }
+
+
+    .gallery-leaf {
+        font-size: 55px;
+    }
+
+}/* =========================================================
+   FIX - SECTION 7 TREE GROWTH DASHBOARD
+   Prevent Gallery CSS from affecting Feature section
+   ========================================================= */
+
+#feature .photo-timeline {
+    display: block;
+    background: #f8faf7;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+#feature .timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#feature .timeline-photo {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #e0e8e0;
+}
+
+    
+        #feature .timeline-photo .photo-placeholder {
+            width: 220px;
+            height: 300px;
+            min-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef3ed;
+            border-radius: 12px;
+            font-size: 45px;
+            margin: 0 auto 12px auto;
+            overflow: hidden;
+        }
+
+#feature .timeline-photo strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#feature .timeline-photo span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+    #feature .timeline-photo img {
+        width: 220px;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 12px auto;
+        border-radius: 12px;
+    }
+/* MOBILE */
+@media (max-width: 900px) {
+
+    #feature .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================
+   HOME - DARK GREEN DESIGN
+   ========================================= */
+
+#home {
+    position: relative;
+    background: radial-gradient( circle at 75% 20%, rgba(80, 150, 85, 0.18), transparent 35% ), linear-gradient( 135deg, #07351f, #062a19 55%, #041f13 );
+    border-radius: 0 0 25px 25px;
+    padding: 70px 35px;
+    overflow: hidden;
+}
+
+
+    /* HOME TEXT */
+
+    #home .section-label {
+        color: #a7df78;
+    }
+
+    #home .hero-text h2 {
+        color: #ffffff;
+    }
+
+        #home .hero-text h2 span {
+            color: #8fdf63;
+        }
+
+    #home .hero-description {
+        color: rgba(255,255,255,0.78);
+    }
+
+
+    /* BUTTONS */
+
+    #home .primary-btn {
+        background: #2d7042;
+        color: white;
+        border: 1px solid #6eaf62;
+    }
+
+        #home .primary-btn:hover {
+            background: #3c8750;
+            transform: translateY(-3px);
+        }
+
+    #home .secondary-btn {
+        background: rgba(255,255,255,0.95);
+        color: #215b34;
+        border: 1px solid #b8d5bd;
+    }
+
+        #home .secondary-btn:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+        }
+
+
+    /* TREE CARD */
+
+    #home .hero-card {
+        background: linear-gradient( 145deg, #e4f2e3, #f7fbf6 );
+        border: 1px solid #9bc998;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.30);
+    }
+
+
+    /* QUICK FACTS */
+
+    #home .quick-facts .fact-card {
+        background: rgba(255,255,255,0.96);
+        border: 1px solid #b9d5bc;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    #home .fact-card small {
+        color: #718579;
+    }
+
+    #home .fact-card strong {
+        color: #245b35;
+    }
+
+
+    /* QUOTE */
+
+    #home .quote-box {
+        background: linear-gradient( 135deg, #e5f2e5, #f3f8f3 );
+        border: 1px solid #a8cda9;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    #home .quote-icon {
+        color: #397148;
+    }
+
+    #home .quote-box p {
+        color: #245b35;
+    }
+
+    #home .quote-box small {
+        color: #718579;
+    }
+
+
+    /* REMOVE HOME DECORATIVE LEAVES */
+
+    #home .gallery-leaf,
+    #home .landing-leaf,
+    #home .decorative-leaf,
+    #home .home-leaf {
+        display: none !important;
+    }
+
+
+/* =========================================
+   HOME RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    #home {
+        padding: 55px 25px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    #home {
+        padding: 45px 18px;
+        border-radius: 0 0 18px 18px;
+    }
+}
+/* =========================================
+   HOME - FINAL FOREST GREEN DESIGN
+   ========================================= */
+
+#home {
+    position: relative;
+    min-height: auto !important;
+    padding: 65px 35px 55px;
+    overflow: hidden;
+    color: white;
+    /* Deep forest background */
+    background: radial-gradient( circle at 15% 20%, rgba(77, 130, 70, 0.35), transparent 30% ), radial-gradient( circle at 85% 75%, rgba(45, 110, 60, 0.30), transparent 35% ), radial-gradient( circle at 50% 50%, rgba(10, 70, 35, 0.45), transparent 60% ), linear-gradient( 135deg, #031d11 0%, #06351e 45%, #021a0e 100% );
+    border-radius: 0 0 28px 28px;
+}
+
+
+    /* subtle natural atmosphere */
+
+    #home::before {
+        content: "";
+        position: absolute;
+        inset: -80px;
+        background: radial-gradient( ellipse at 10% 30%, rgba(115, 170, 90, 0.15), transparent 25% ), radial-gradient( ellipse at 90% 20%, rgba(70, 130, 70, 0.18), transparent 28% ), radial-gradient( ellipse at 70% 90%, rgba(40, 100, 55, 0.20), transparent 30% );
+        filter: blur(35px);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+
+    /* make all Home content appear above background */
+
+    #home > * {
+        position: relative;
+        z-index: 2;
+    }
+
+
+    /* =========================================
+   HERO CONTENT
+   ========================================= */
+
+    #home .hero-content {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: 1.35fr 0.75fr;
+        gap: 70px;
+        align-items: center;
+    }
+
+
+    /* small heading */
+
+    #home .section-label {
+        margin-bottom: 14px;
+        color: #a8e77c;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+
+
+    /* MAIN TITLE */
+
+    #home .hero-text h2 {
+        margin: 0;
+        font-size: clamp(48px, 5vw, 72px);
+        line-height: 1.02;
+        font-weight: 800;
+        letter-spacing: -1px;
+        color: white;
+        text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+
+        /* green second line */
+
+        #home .hero-text h2 span {
+            color: #91e866;
+        }
+
+
+    /* description */
+
+    #home .hero-description {
+        max-width: 720px;
+        margin-top: 28px;
+        color: rgba(255,255,255,0.82);
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+
+    /* =========================================
+   BUTTONS
+   ========================================= */
+
+    #home .hero-buttons {
+        margin-top: 30px;
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+
+    #home .primary-btn {
+        padding: 15px 28px;
+        border-radius: 12px;
+        background: #23683a;
+        border: 1px solid #76b95f;
+        color: white;
+        font-weight: 800;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.20);
+        transition: all .25s ease;
+    }
+
+
+        #home .primary-btn:hover {
+            background: #2f7c45;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.30);
+        }
+
+
+    #home .secondary-btn {
+        padding: 15px 28px;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.96);
+        border: 1px solid white;
+        color: #164b2b;
+        font-weight: 800;
+        transition: all .25s ease;
+    }
+
+
+        #home .secondary-btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+
+    /* =========================================
+   TREE CARD
+   ========================================= */
+
+    #home .hero-card {
+        padding: 35px 30px;
+        border-radius: 25px;
+        background: rgba(3, 45, 25, 0.45);
+        border: 1px solid rgba(129, 207, 102, 0.75);
+        text-align: center;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+        backdrop-filter: blur(8px);
+    }
+
+
+    /* tree */
+
+    #home .tree-illustration {
+        font-size: 120px;
+        padding: 10px 0 20px;
+        filter: drop-shadow(0 8px 10px rgba(0,0,0,0.3));
+    }
+
+
+    #home .hero-card h3 {
+        margin: 0;
+        color: white;
+        font-size: 23px;
+        font-weight: 800;
+    }
+
+
+    #home .hero-card p {
+        color: rgba(255,255,255,0.78);
+        line-height: 1.7;
+    }
+
+
+    /* =========================================
+   PROGRESS
+   ========================================= */
+
+    #home .progress-info {
+        color: rgba(255,255,255,0.75);
+    }
+
+
+        #home .progress-info strong {
+            color: #a7ed7c;
+        }
+
+
+    #home .progress-bar {
+        background: rgba(255,255,255,0.18);
+    }
+
+
+    #home .progress-fill {
+        background: #9bea72;
+    }
+
+
+    /* =========================================
+   QUICK FACTS
+   ========================================= */
+
+    #home .quick-facts {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-top: 35px;
+    }
+
+
+    #home .fact-card {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: rgba(4, 49, 27, 0.58);
+        border: 1px solid rgba(118, 190, 95, 0.70);
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        backdrop-filter: blur(7px);
+        
+    }
+
+
+       
+
+
+        #home .fact-card > span {
+            font-size: 28px;
+        }
+
+
+        #home .fact-card small {
+            display: block;
+            color: #a8d5b0 !important;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+
+      
+
+
+    /* =========================================
+   QUOTE BOX
+   ========================================= */
+
+    #home .quote-box {
+        margin-top: 30px;
+        padding: 35px;
+        text-align: center;
+        background: rgba(3, 52, 28, 0.58);
+        border: 1px solid rgba(119, 193, 97, 0.70);
+        border-radius: 20px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+        backdrop-filter: blur(8px);
+    }
+
+
+    #home .quote-icon {
+        color: #a4ed7b;
+        font-size: 45px;
+    }
+
+
+    #home .quote-box p {
+        margin: 0;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+    #home .quote-box small {
+        color: #a9d99a;
+    }
+
+
+    /* =========================================
+   REMOVE DECORATIVE LEAVES FROM HOME
+   ========================================= */
+
+    #home .gallery-leaf,
+    #home .gallery-leaf-left,
+    #home .gallery-leaf-right,
+    #home .landing-leaf,
+    #home .home-leaf,
+    #home .decorative-leaf {
+        display: none !important;
+    }
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    #home .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    #home .hero-text h2 {
+        font-size: 48px;
+    }
+
+    #home .quick-facts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    #home {
+        padding: 45px 20px;
+    }
+
+        #home .hero-text h2 {
+            font-size: 40px;
+        }
+
+        #home .quick-facts {
+            grid-template-columns: 1fr;
+        }
+
+        #home .hero-card {
+            padding: 25px 20px;
+        }
+}

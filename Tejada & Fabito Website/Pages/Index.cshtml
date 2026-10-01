@@ -1,0 +1,3154 @@
+﻿@page
+@model TejadaFabitoWebsite.Pages.IndexModel
+ 
+@{
+    ViewData["Title"] = "Tejada & Fabito | Tree Planting";
+}
+ 
+<!-- =========================
+     FRONT PAGE
+     ========================= -->
+<!-- =========================================
+     OPENING / LANDING PAGE
+     ========================================= -->
+
+<div id="landingPage" class="new-landing">
+
+    <!-- BACKGROUND IMAGE -->
+    <img class="landing-bg" src="~/images/landing-bg.jpg" alt="Tree Planting Project Background" />
+
+    <!-- DARK GREEN OVERLAY -->
+    <div class="landing-dark-overlay"></div>
+
+    <!-- DECORATIVE LEAVES -->
+    <div class="landing-leaf leaf-one">🌿</div>
+    <div class="landing-leaf leaf-two">🌿</div>
+
+    <!-- CENTER CONTENT -->
+    <div class="new-landing-content">
+
+        <div class="landing-name">
+            <span></span>
+            FABITO &amp; TEJADA
+            <span></span>
+        </div>
+
+        <h1>
+            TREE PLANTING
+            <strong>PROJECT</strong>
+        </h1>
+
+        <p class="landing-subtitle">
+            Growing Trees. Growing Awareness.
+        </p>
+
+        <!-- GREEN LINE -->
+        <div class="landing-green-line"></div>
+
+        <!-- PROJECT VALUES -->
+        <div class="landing-values">
+
+            <div class="landing-value">
+                <div class="value-icon">🌱</div>
+                <div>PLANT</div>
+            </div>
+
+            <div class="landing-value">
+                <div class="value-icon">🍃</div>
+                <div>MONITOR</div>
+            </div>
+
+            <div class="landing-value">
+                <div class="value-icon">🌎</div>
+                <div>PROTECT</div>
+            </div>
+
+            <div class="landing-value">
+                <div class="value-icon">👥</div>
+                <div>FOR A GREENER<br />TOMORROW</div>
+            </div>
+
+        </div>
+
+        <!-- GET STARTED -->
+        <button class="new-get-started" onclick="showWebsite()">
+            <span>GET STARTED</span>
+            <span class="start-arrow">→</span>
+        </button>
+
+        <!-- BOTTOM TEXT -->
+        <div class="landing-bottom-text">
+            <span></span>
+            SCIENCE&nbsp;&nbsp;•&nbsp;&nbsp;SUSTAINABILITY&nbsp;&nbsp;•&nbsp;&nbsp;GROWTH
+            <span></span>
+        </div>
+
+    </div>
+
+</div>
+
+ 
+<!-- =========================
+     MAIN WEBSITE
+     ========================= -->
+<div id="mainWebsite" class="main-website">
+ 
+    <!-- NAVBAR -->
+    <nav class="main-navbar">
+ 
+        <div class="navbar-brand">
+            <span class="brand-icon"></span>
+            <div>
+                <strong>TEJADA & FABITO</strong>
+                <small>Tree Planting Project</small>
+            </div>
+        </div>
+ 
+        <div class="navbar-links">
+ 
+            <button class="nav-btn active" onclick="showSection('home', this)">Home</button>
+
+            <button class="nav-btn" onclick="showSection('why-tree', this)">
+                Why This Tree
+            </button>
+
+            <button class="nav-btn" onclick="showSection('science', this)">
+                Science
+            </button>
+
+            <button class="nav-btn" onclick="showSection('location', this)">
+                Location
+            </button>
+
+            <button class="nav-btn" onclick="showSection('gallery', this)">
+                Gallery
+            </button>
+
+            <button class="nav-btn" onclick="showSection('monitoring', this)">
+                Monitoring
+            </button>
+
+            <button class="nav-btn" onclick="showSection('matters', this)">
+                Why It Matters
+            </button>
+
+            <button class="nav-btn" onclick="showSection('feature', this)">
+                Feature
+            </button>
+        </div>
+ 
+    </nav>
+
+ 
+    <!-- =========================
+         HOME
+         ========================= -->
+    <main class="website-content">
+ 
+        <section id="home" class="content-section active-section">
+ 
+            <div class="hero-content">
+ 
+                <div class="hero-text">
+ 
+                    <p class="section-label">WELCOME TO OUR PROJECT</p>
+ 
+                    <h2>
+                        Growing a Tree,<br />
+                        <span>Growing a Future.</span>
+                    </h2>
+ 
+                    <p class="hero-description">
+                        Welcome to our Web Platform. This
+                        website documents our tree-planting journey and
+                        connects our experience with Science, Technology,
+                        and Society.
+                    </p>
+ 
+                    <p class="hero-description">
+                        Through this project, we will document the tree
+                        species we selected, explain why we chose them,
+                        record their growth, identify their planting
+                        locations, and share why protecting our environment
+                        matters.
+                    </p>
+ 
+                    <div class="hero-buttons">
+ 
+                        <button class="primary-btn"
+                                onclick="showSection('why-tree', getNavButton(1))">
+                            Explore Our Tree
+                            <span>→</span>
+                        </button>
+ 
+                        <button class="secondary-btn"
+                                onclick="showSection('location', getNavButton(3))">
+                            View Location 📍
+                        </button>
+ 
+                    </div>
+ 
+                </div>
+
+ 
+                <div class="hero-card">
+ 
+                    <div class="tree-illustration">
+                        🌳
+                    </div>
+ 
+                    <h3>Our Tree Planting Journey</h3>
+ 
+                    <p>
+                        From planting day to future growth,
+                        every observation becomes part of our
+                        scientific record.
+                    </p>
+ 
+                    <div class="mini-progress">
+ 
+                        <div class="progress-info">
+                            <span>Project Progress</span>
+                            <strong>Getting Started</strong>
+                        </div>
+ 
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+ 
+                    </div>
+ 
+                </div>
+ 
+            </div>
+
+ 
+            <!-- QUICK FACTS -->
+            <div class="quick-facts">
+ 
+                <div class="fact-card">
+                    <span>🌳</span>
+                    <div>
+                        <small>PROJECT</small>
+                        <strong>Tree Planting</strong>
+                    </div>
+                </div>
+ 
+                <div class="fact-card">
+                    <span>👥</span>
+                    <div>
+                        <small>STUDENTS</small>
+                        <strong>Tejada & Fabito</strong>
+                    </div>
+                </div>
+ 
+                <div class="fact-card">
+                    <span>📍</span>
+                    <div>
+                        <small>LOCATION</small>
+                        <strong>Bagong Buhay & Alcate</strong>
+                    </div>
+                </div>
+ 
+                <div class="fact-card">
+                    <span>📊</span>
+                    <div>
+                        <small>MONITORING</small>
+                        <strong>3 Entries</strong>
+                    </div>
+                </div>
+ 
+            </div>
+
+ 
+            <!-- OPTIONAL PLEDGE -->
+            <div class="quote-box">
+ 
+                <span class="quote-icon">“</span>
+ 
+                <p>
+                    A small action today can become part of a
+                    bigger change tomorrow.
+                </p>
+ 
+                <small>— Tejada & Fabito Environmental Pledge</small>
+ 
+            </div>
+ 
+        </section>
+ 
+        <!-- =========================
+     SECTION 2
+     WHY I CHOSE THIS TREE
+     ========================= -->
+        <section id="why-tree" class="content-section">
+ 
+            <!-- =========================
+         WHY THIS TREE - MAIN PAGE
+         ========================= -->
+            <div id="whyTreeMain">
+ 
+                <div class="section-header">
+ 
+                    <span class="section-number">01</span>
+ 
+                    <div>
+                        <p class="section-label">OUR PERSONAL STORY</p>
+                        <h2>Why I Chose This Tree</h2>
+                    </div>
+ 
+                </div>
+
+ 
+                <div class="tree-story-intro">
+ 
+                    <div class="tree-story-icon">
+                        🌱
+                    </div>
+ 
+                    <div>
+ 
+                        <h3>Every tree has a story.</h3>
+ 
+                        <p>
+                            Meet the two students behind our tree-planting project.
+                            Explore their personal reasons for choosing their trees,
+                            their connection to the environment, and their reflections
+                            on Science, Technology, and Society.
+                        </p>
+ 
+                    </div>
+ 
+                </div>
+
+ 
+                <!-- =========================
+             TWO STUDENT CARDS
+             ========================= -->
+                <div class="student-tree-cards">
+
+ 
+                    <!-- TEJADA CARD -->
+                    <div class="student-tree-card">
+ 
+                        <div class="student-photo">
+ 
+                            <!--
+                        LATER:
+                        Replace this placeholder with Tejada's actual picture.
+ 
+                        Example:
+                        <img src="/images/tejada.jpg" alt="Tejada">
+                    -->
+ 
+                            <div class="photo-placeholder-large">
+                                <span>📷</span>
+ 
+                                <strong>Tejada's Photo</strong>
+ 
+                                <small>
+                                    Original photo will be added here
+                                </small>
+                            </div>
+ 
+                        </div>
+
+ 
+                        <div class="student-card-content">
+ 
+                            <p class="student-card-label">
+                                STUDENT 1
+                            </p>
+ 
+                            <h3>Tejada</h3>
+ 
+                            <p>
+                                Discover the story behind Tejada's tree selection,
+                                personal connection, and environmental reflection.
+                            </p>
+ 
+                            <button class="explore-btn"
+                                    onclick="showTreeStory('tejada')">
+ 
+                                Explore
+ 
+                                <span>→</span>
+ 
+                            </button>
+ 
+                        </div>
+ 
+                    </div>
+
+ 
+                    <!-- FABITO CARD -->
+                    <div class="student-tree-card">
+ 
+                        <div class="student-photo">
+ 
+                            <!--
+                        LATER:
+                        Replace this placeholder with Fabito's actual picture.
+ 
+                        Example:
+                        <img src="/images/fabito.jpg" alt="Fabito">
+                    -->
+ 
+                            <div class="photo-placeholder-large">
+                                <span>📷</span>
+ 
+                                <strong>Fabito's Photo</strong>
+ 
+                                <small>
+                                    Original photo will be added here
+                                </small>
+                            </div>
+ 
+                        </div>
+
+ 
+                        <div class="student-card-content">
+ 
+                            <p class="student-card-label">
+                                STUDENT 2
+                            </p>
+ 
+                            <h3>Fabito</h3>
+ 
+                            <p>
+                                Discover the story behind Fabito's tree selection,
+                                personal connection, and environmental reflection.
+                            </p>
+ 
+                            <button class="explore-btn"
+                                    onclick="showTreeStory('fabito')">
+ 
+                                Explore
+ 
+                                <span>→</span>
+ 
+                            </button>
+ 
+                        </div>
+ 
+                    </div>
+ 
+                </div>
+
+ 
+                <!-- =========================
+             STORY QUESTIONS
+             ========================= -->
+                <div class="story-checklist">
+ 
+                    <h3>🌳 What you'll discover</h3>
+ 
+                    <div class="story-question-grid">
+ 
+                        <div>
+                            <span>01</span>
+                            <strong>Why this species?</strong>
+                            <p>
+                                The reason behind the tree selection.
+                            </p>
+                        </div>
+ 
+                        <div>
+                            <span>02</span>
+                            <strong>Why this location?</strong>
+                            <p>
+                                Why the planting location was chosen.
+                            </p>
+                        </div>
+ 
+                        <div>
+                            <span>03</span>
+                            <strong>Personal connection</strong>
+                            <p>
+                                What planting a tree means personally.
+                            </p>
+                        </div>
+ 
+                        <div>
+                            <span>04</span>
+                            <strong>STS connection</strong>
+                            <p>
+                                How the experience connects to STS.
+                            </p>
+                        </div>
+ 
+                    </div>
+ 
+                </div>
+ 
+            </div>
+
+ 
+ 
+            <!-- =========================
+         TEJADA STORY PAGE
+         ========================= -->
+            <div id="tejadaStory" class="tree-story-detail">
+ 
+                <button class="back-story-btn"
+                        onclick="backToTreeStories()">
+ 
+                    ← Back
+ 
+                </button>
+
+ 
+                <div class="story-detail-header">
+ 
+                    <p class="section-label">
+                        STUDENT 1 • PERSONAL NARRATIVE
+                    </p>
+ 
+                    <h2>Tejada</h2>
+ 
+                    <p>
+                        My Reason for Choosing This Tree
+                    </p>
+ 
+                </div>
+
+ 
+                <div class="story-detail-layout">
+ 
+                    <div class="story-detail-photo">
+ 
+                        <div class="photo-placeholder-detail">
+ 
+                            <span>📷</span>
+ 
+                            <strong>Tejada's Original Photo</strong>
+ 
+                            <small>
+                                Your actual photo will be placed here.
+                            </small>
+ 
+                        </div>
+ 
+                    </div>
+
+ 
+                    <div class="story-detail-content">
+ 
+                        <h3>🌱 Why I Chose This Tree</h3>
+ 
+                        <!--
+                    REPLACE THE TEXT BELOW WITH
+                    TEJADA'S ACTUAL 250+ WORD NARRATIVE.
+                -->
+ 
+                        <p>
+                             Tejada personal narrative 
+                        </p>
+ 
+                        <p>
+                           why coconut
+                        </p>
+ 
+                        <p
+                        </strong>
+                    </p>
+
+ 
+                    <div class="story-detail-tags">
+ 
+                        <span>🌱 Tree Selection</span>
+ 
+                        <span>🌎 Environment</span>
+ 
+                        <span>👤 Personal Reflection</span>
+ 
+                        <span>🔬 STS</span>
+ 
+                    </div>
+ 
+                </div>
+ 
+            </div>
+
+ 
+            <div class="story-bottom-box">
+ 
+                <h3>🌳 Personal Reflection</h3>
+ 
+                <p>
+                    Tejada's final reflection
+                </p>
+ 
+            </div>
+
+ 
+ 
+            
+        </div>
+
+ 
+ 
+        <!-- =========================
+         FABITO STORY PAGE
+         ========================= -->
+        <div id="fabitoStory" class="tree-story-detail">
+ 
+            <button class="back-story-btn"
+                    onclick="backToTreeStories()">
+ 
+                ← Back
+ 
+            </button>
+
+ 
+            <div class="story-detail-header">
+ 
+                <p class="section-label">
+                    STUDENT 2 • PERSONAL NARRATIVE
+                </p>
+ 
+                <h2>Fabito</h2>
+ 
+                <p>
+                    My Reason for Choosing This Tree
+                </p>
+ 
+            </div>
+
+ 
+            <div class="story-detail-layout">
+ 
+                <div class="story-detail-photo">
+ 
+                    <div class="photo-placeholder-detail">
+ 
+                        <span>📷</span>
+ 
+                        <strong>Fabito's Original Photo</strong>
+ 
+                        <small>
+                            Your actual photo will be placed here.
+                        </small>
+ 
+                    </div>
+ 
+                </div>
+
+ 
+                <div class="story-detail-content">
+ 
+                    <h3>🌿 Why I Chose This Tree</h3>
+ 
+                    <!--
+                    REPLACE THE TEXT BELOW WITH
+                    FABITO'S ACTUAL 250+ WORD NARRATIVE.
+                -->
+ 
+                    <p>
+                        Fabito's personal narrative 
+                    </p>
+ 
+                    <p>
+                       why malunggay
+                    </p>
+ 
+                    <p>
+                       
+                    </strong>
+                </p>
+
+ 
+                <div class="story-detail-tags">
+ 
+                    <span>🌿 Personal Connection</span>
+ 
+                    <span>🌎 Community</span>
+ 
+                    <span>👤 Reflection</span>
+ 
+                    <span>🔬 STS</span>
+ 
+                </div>
+ 
+            </div>
+ 
+        </div>
+
+ 
+        <div class="story-bottom-box">
+ 
+            <h3>🌱 Personal Reflection</h3>
+ 
+            <p>
+                 Fabito's final reflection 
+            </p>
+ 
+        </div>
+
+ 
+ 
+    </div>
+ 
+</section>
+<!-- =========================================================
+     SECTION 3 — SCIENCE BEHIND THE TREE
+     ========================================================= -->
+ 
+<section id="science-section" class="science-section">
+ 
+    <div class="section-heading">
+ 
+        <span class="section-number">SECTION 3</span>
+ 
+        <h2>🔬 Science Behind the Tree</h2>
+ 
+        <p>
+            Discover the science, biology, ecology, and environmental
+            importance behind the trees planted by Tejada and Fabito.
+        </p>
+ 
+    </div>
+
+ 
+    <!-- =====================================================
+         TREE SELECTION CARDS
+         ===================================================== -->
+ 
+    <div id="scienceMain" class="science-main">
+ 
+        <div class="science-tree-cards">
+ 
+            <!-- TEJADA -->
+            <div class="science-tree-card">
+ 
+                <div class="science-icon">
+                    🌴
+                </div>
+ 
+                <div class="science-card-content">
+ 
+                    <span class="science-label">
+                        TEJADA'S TREE
+                    </span>
+ 
+                    <h3>Niyog / Coconut</h3>
+ 
+                    <p>
+                        Learn about the scientific characteristics,
+                        biology, ecology, and environmental importance
+                        of the coconut tree.
+                    </p>
+ 
+                    <button class="science-view-btn"
+                            onclick="showScienceDetails('tejada')">
+ 
+                        View Scientific Details →
+ 
+                    </button>
+ 
+                </div>
+ 
+            </div>
+
+ 
+            <!-- FABITO -->
+            <div class="science-tree-card">
+ 
+                <div class="science-icon">
+                    🌿
+                </div>
+ 
+                <div class="science-card-content">
+ 
+                    <span class="science-label">
+                        FABITO'S TREE
+                    </span>
+ 
+                    <h3>Malunggay / Moringa</h3>
+ 
+                    <p>
+                        Explore the biology, habitat, ecological role,
+                        and environmental importance of the moringa tree.
+                    </p>
+ 
+                    <button class="science-view-btn"
+                            onclick="showScienceDetails('fabito')">
+ 
+                        View Scientific Details →
+ 
+                    </button>
+ 
+                </div>
+ 
+            </div>
+ 
+        </div>
+ 
+    </div>
+
+ 
+    <!-- =====================================================
+         TEJADA — COCONUT
+         ===================================================== -->
+ 
+    <div id="tejadaScience"
+         class="science-detail-page">
+ 
+        <button class="science-back-btn"
+                onclick="backToScienceMain()">
+ 
+            ← Back
+ 
+        </button>
+
+ 
+        <div class="science-detail-header">
+ 
+            <span>TEJADA'S TREE</span>
+ 
+            <h2>Niyog / Coconut</h2>
+ 
+            <p>
+                <em>Cocos nucifera</em> L.
+            </p>
+ 
+        </div>
+
+ 
+        <!-- SPECIES PROFILE -->
+ 
+        <div class="science-info-card">
+ 
+            <h3>🌿 Species Profile</h3>
+ 
+            <div class="science-info-grid">
+ 
+                <div>
+                    <strong>Common Name</strong>
+                    <p>Niyog / Coconut</p>
+                </div>
+ 
+                <div>
+                    <strong>Scientific Name</strong>
+                    <p><em>Cocos nucifera</em> L.</p>
+                </div>
+ 
+                <div>
+                    <strong>Family</strong>
+                    <p>Arecaceae</p>
+                </div>
+ 
+                <div>
+                    <strong>Origin</strong>
+                    <p>
+                        Central Malesia to the Southwest Pacific,
+                        including the Philippines.
+                    </p>
+                </div>
+ 
+                <div>
+                    <strong>Conservation Status</strong>
+                    <p>
+                        Least Concern in the conservation assessment
+                        reported by Kew's species information.
+                    </p>
+                </div>
+ 
+            </div>
+ 
+        </div>
+
+ 
+        <!-- BIOLOGY -->
+ 
+        <div class="science-info-card">
+ 
+            <h3>🧬 Biology</h3>
+ 
+            <p>
+                The coconut is a tropical palm with a single,
+                generally slender and unbranched trunk. Its leaves
+                are long and pinnate, forming a crown at the top
+                of the trunk.
+            </p>
+ 
+            <div class="science-facts">
+ 
+                <div>
+                    <strong>Growth Rate</strong>
+                    <span>
+                        Growth varies depending on climate,
+                        soil, water, nutrients, and cultivation.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Mature Height</strong>
+                    <span>
+                        Coconut palms can grow to several metres
+                        in height and develop a tall trunk.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Root System</strong>
+                    <span>
+                        It develops a fibrous root system typical
+                        of palms, with many roots extending from
+                        the base of the trunk.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Leaf Structure</strong>
+                    <span>
+                        Leaves are pinnate, meaning many narrow
+                        leaflets are arranged along a central
+                        leaf stalk.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Bark / Trunk</strong>
+                    <span>
+                        The trunk is generally smooth, slender,
+                        and unbranched.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Flowering / Fruiting</strong>
+                    <span>
+                        The coconut produces flowers in
+                        inflorescences and develops the familiar
+                        coconut fruit with a fibrous husk and
+                        hard inner shell.
+                    </span>
+                </div>
+ 
+            </div>
+ 
+        </div>
+
+ 
+        <!-- ECOLOGY -->
+ 
+        <div class="science-info-card">
+ 
+            <h3>🌎 Ecology</h3>
+ 
+            <p>
+                Coconut is strongly associated with warm tropical
+                environments and is commonly cultivated in coastal
+                areas and other suitable tropical locations.
+                It is also widely grown around human communities
+                and agricultural areas.
+            </p>
+ 
+            <div class="science-facts">
+ 
+                <div>
+                    <strong>Habitat</strong>
+                    <span>
+                        Tropical coastal areas, plantations,
+                        gardens, and other cultivated landscapes.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Soil Requirements</strong>
+                    <span>
+                        Performs well in suitable tropical soils
+                        with adequate drainage and nutrients.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Water Requirements</strong>
+                    <span>
+                        Requires adequate moisture for healthy
+                        growth, especially while establishing.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Sunlight</strong>
+                    <span>
+                        Coconut is adapted to sunny tropical
+                        environments.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Native Range</strong>
+                    <span>
+                        Central Malesia to the Southwest Pacific,
+                        including the Philippines.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Wildlife Interactions</strong>
+                    <span>
+                        Its flowers, fruits, and vegetation can
+                        contribute resources to organisms within
+                        tropical ecosystems.
+                    </span>
+                </div>
+ 
+            </div>
+ 
+        </div>
+
+ 
+        <!-- ENVIRONMENTAL BENEFITS -->
+ 
+        <div class="science-info-card">
+ 
+            <h3>🌱 Environmental Benefits</h3>
+ 
+            <div class="benefit-grid">
+ 
+                <div class="benefit-item">
+                    <span>🌬️</span>
+ 
+                    <h4>Carbon Sequestration</h4>
+ 
+                    <p>
+                        Through photosynthesis, the coconut tree
+                        takes in carbon dioxide and incorporates
+                        carbon into its growing plant tissues.
+                    </p>
+ 
+                </div>
+
+ 
+                <div class="benefit-item">
+                    <span>💨</span>
+ 
+                    <h4>Oxygen Production</h4>
+ 
+                    <p>
+                        Photosynthesis releases oxygen as a
+                        by-product while the plant produces
+                        organic compounds for growth.
+                    </p>
+ 
+                </div>
+
+ 
+                <div class="benefit-item">
+                    <span>💧</span>
+ 
+                    <h4>Watershed Protection</h4>
+ 
+                    <p>
+                        Vegetation can contribute to soil and
+                        water protection by helping reduce the
+                        direct impact of rainfall on exposed soil.
+                    </p>
+ 
+                </div>
+
+ 
+                <div class="benefit-item">
+                    <span>🌱</span>
+ 
+                    <h4>Erosion Control</h4>
+ 
+                    <p>
+                        Plant roots can help hold soil particles
+                        together and vegetation can provide
+                        ground and soil protection.
+                    </p>
+ 
+                </div>
+
+ 
+                <div class="benefit-item">
+                    <span>🦋</span>
+ 
+                    <h4>Biodiversity</h4>
+ 
+                    <p>
+                        Trees and palms can contribute habitat
+                        structure and provide resources for
+                        organisms living in the surrounding
+                        environment.
+                    </p>
+ 
+                </div>
+ 
+            </div>
+ 
+        </div>
+
+ 
+        <!-- PHOTOSYNTHESIS -->
+ 
+        <div class="science-info-card photosynthesis-card">
+ 
+            <h3>☀️ Photosynthesis & Climate</h3>
+ 
+            <p>
+                Coconut leaves perform photosynthesis. During this
+                process, the plant uses light energy, carbon dioxide,
+                and water to produce chemical energy in the form of
+                organic compounds. Oxygen is released as a
+                by-product.
+            </p>
+ 
+            <div class="photosynthesis-flow">
+ 
+                <div>
+                    ☀️
+                    <strong>Sunlight</strong>
+                </div>
+ 
+                <span>→</span>
+ 
+                <div>
+                    🌿
+                    <strong>Leaves</strong>
+                </div>
+ 
+                <span>→</span>
+ 
+                <div>
+                    💨
+                    <strong>CO₂</strong>
+                </div>
+ 
+                <span>→</span>
+ 
+                <div>
+                    🌱
+                    <strong>Growth</strong>
+                </div>
+ 
+            </div>
+ 
+            <p>
+                Because plants remove carbon dioxide from the
+                atmosphere during photosynthesis, growing vegetation
+                participates in the global carbon cycle. Coconut
+                vegetation can therefore contribute to carbon storage
+                as part of its growth and biomass.
+            </p>
+ 
+        </div>
+
+ 
+        <!-- REFERENCES -->
+ 
+        <div class="science-info-card">
+ 
+            <h3>📚 References</h3>
+ 
+            <p class="reference-note">
+                Scientific information is based on botanical and
+                scientific reference sources. References will be
+                presented in APA 7th edition format.
+            </p>
+ 
+            <div class="references-list">
+ 
+                <p>
+                    1. Royal Botanic Gardens, Kew.
+                    <em>
+                        Plants of the World Online:
+                        Cocos nucifera L.
+                    </em>
+                </p>
+ 
+                <p>
+                    2. Royal Botanic Gardens, Kew.
+                    <em>
+                        Plants of the World Online:
+                        Cocos nucifera L. — General Information.
+                    </em>
+                </p>
+ 
+                <p>
+                    3. Govaerts, R., Nic Lughadha, E., Black, N.,
+                    Turner, R., & Paton, A. (2021).
+                    The World Checklist of Vascular Plants.
+                </p>
+ 
+            </div>
+ 
+        </div>
+ 
+    </div>
+
+ 
+    <!-- =====================================================
+         FABITO — MALUNGGAY
+         ===================================================== -->
+ 
+    <div id="fabitoScience"
+         class="science-detail-page">
+ 
+        <button class="science-back-btn"
+                onclick="backToScienceMain()">
+ 
+            ← Back 
+ 
+        </button>
+
+ 
+        <div class="science-detail-header">
+ 
+            <span>FABITO'S TREE</span>
+ 
+            <h2>Malunggay / Moringa</h2>
+ 
+            <p>
+                <em>Moringa oleifera</em> Lam.
+            </p>
+ 
+        </div>
+
+ 
+        <!-- SPECIES PROFILE -->
+ 
+        <div class="science-info-card">
+ 
+            <h3>🌿 Species Profile</h3>
+ 
+            <div class="science-info-grid">
+ 
+                <div>
+                    <strong>Common Name</strong>
+                    <p>Malunggay / Moringa</p>
+                </div>
+ 
+                <div>
+                    <strong>Scientific Name</strong>
+                    <p><em>Moringa oleifera</em> Lam.</p>
+                </div>
+ 
+                <div>
+                    <strong>Family</strong>
+                    <p>Moringaceae</p>
+                </div>
+ 
+                <div>
+                    <strong>Origin</strong>
+                    <p>
+                        Northeastern Pakistan to Northwestern India.
+                    </p>
+                </div>
+ 
+                <div>
+                    <strong>Conservation Status</strong>
+                    <p>
+                        Least Concern (IUCN assessment reported
+                        by Kew).
+                    </p>
+                </div>
+ 
+            </div>
+ 
+        </div>
+
+ 
+        <!-- BIOLOGY -->
+ 
+        <div class="science-info-card">
+ 
+            <h3>🧬 Biology</h3>
+ 
+            <p>
+                Malunggay is a small tree with a branching growth
+                form. Its leaves are compound and consist of many
+                small leaflets. The plant produces fragrant flowers
+                that are generally white to yellowish, sometimes
+                with a reddish or crimson tinge.
+            </p>
+ 
+            <div class="science-facts">
+ 
+                <div>
+                    <strong>Growth Rate</strong>
+                    <span>
+                        Moringa is a relatively fast-growing
+                        multipurpose tree under suitable
+                        environmental conditions.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Mature Height</strong>
+                    <span>
+                        It can reach several metres in height.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Root System</strong>
+                    <span>
+                        It develops a substantial root system
+                        that supports the plant and allows it
+                        to obtain water and nutrients from the soil.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Leaf Structure</strong>
+                    <span>
+                        Leaves are compound and contain numerous
+                        small leaflets.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Bark</strong>
+                    <span>
+                        The bark is generally whitish to
+                        grayish in appearance.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Flowering / Fruiting</strong>
+                    <span>
+                        Moringa produces fragrant flowers and
+                        elongated fruits containing seeds.
+                    </span>
+                </div>
+ 
+            </div>
+ 
+        </div>
+
+ 
+        <!-- ECOLOGY -->
+ 
+        <div class="science-info-card">
+ 
+            <h3>🌎 Ecology</h3>
+ 
+            <p>
+                Moringa is native to South Asia but has been
+                introduced and cultivated in many tropical and
+                subtropical regions. It is associated with
+                seasonally dry tropical environments.
+            </p>
+ 
+            <div class="science-facts">
+ 
+                <div>
+                    <strong>Habitat</strong>
+                    <span>
+                        Seasonally dry tropical environments,
+                        woodland, savanna, shrubland, and
+                        cultivated areas.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Soil Requirements</strong>
+                    <span>
+                        Can grow in a variety of soils when
+                        suitable drainage and growing conditions
+                        are available.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Water Requirements</strong>
+                    <span>
+                        Can tolerate relatively dry conditions
+                        once established, but adequate water
+                        supports healthy growth.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Sunlight</strong>
+                    <span>
+                        Grows well in warm areas with sufficient
+                        sunlight.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Native Range</strong>
+                    <span>
+                        Northeastern Pakistan to Northwestern India.
+                    </span>
+                </div>
+ 
+                <div>
+                    <strong>Wildlife Interactions</strong>
+                    <span>
+                        Its flowers and plant structure can
+                        interact with insects and other organisms
+                        in the surrounding ecosystem.
+                    </span>
+                </div>
+ 
+            </div>
+ 
+        </div>
+
+ 
+        <!-- ENVIRONMENTAL BENEFITS -->
+ 
+        <div class="science-info-card">
+ 
+            <h3>🌱 Environmental Benefits</h3>
+ 
+            <div class="benefit-grid">
+ 
+                <div class="benefit-item">
+                    <span>🌬️</span>
+ 
+                    <h4>Carbon Sequestration</h4>
+ 
+                    <p>
+                        Moringa removes carbon dioxide from the
+                        atmosphere through photosynthesis and
+                        stores carbon in its growing biomass.
+                    </p>
+ 
+                </div>
+
+ 
+                <div class="benefit-item">
+                    <span>💨</span>
+ 
+                    <h4>Oxygen Production</h4>
+ 
+                    <p>
+                        Oxygen is released during photosynthesis
+                        while the plant produces organic compounds
+                        needed for growth.
+                    </p>
+ 
+                </div>
+
+ 
+                <div class="benefit-item">
+                    <span>💧</span>
+ 
+                    <h4>Watershed Protection</h4>
+ 
+                    <p>
+                        Vegetation contributes to the protection
+                        of soil and water within vegetated
+                        landscapes.
+                    </p>
+ 
+                </div>
+
+ 
+                <div class="benefit-item">
+                    <span>🌱</span>
+ 
+                    <h4>Erosion Control</h4>
+ 
+                    <p>
+                        Plant roots and vegetation can help
+                        stabilize soil and reduce exposure
+                        of bare soil to erosion.
+                    </p>
+ 
+                </div>
+
+ 
+                <div class="benefit-item">
+                    <span>🦋</span>
+ 
+                    <h4>Biodiversity</h4>
+ 
+                    <p>
+                        Moringa can contribute plant structure
+                        and biological resources to the surrounding
+                        ecosystem.
+                    </p>
+ 
+                </div>
+ 
+            </div>
+ 
+        </div>
+
+ 
+        <!-- PHOTOSYNTHESIS -->
+ 
+        <div class="science-info-card photosynthesis-card">
+ 
+            <h3>☀️ Photosynthesis & Climate</h3>
+ 
+            <p>
+                Moringa leaves carry out photosynthesis using
+                sunlight, carbon dioxide, and water. The process
+                produces organic compounds that support plant
+                growth, while oxygen is released as a by-product.
+            </p>
+ 
+            <div class="photosynthesis-flow">
+ 
+                <div>
+                    ☀️
+                    <strong>Sunlight</strong>
+                </div>
+ 
+                <span>→</span>
+ 
+                <div>
+                    🌿
+                    <strong>Leaves</strong>
+                </div>
+ 
+                <span>→</span>
+ 
+                <div>
+                    💨
+                    <strong>CO₂</strong>
+                </div>
+ 
+                <span>→</span>
+ 
+                <div>
+                    🌱
+                    <strong>Growth</strong>
+                </div>
+ 
+            </div>
+ 
+            <p>
+                Through photosynthesis, moringa participates in
+                the carbon cycle. Carbon dioxide taken from the
+                atmosphere becomes part of the plant's biomass
+                as the tree grows.
+            </p>
+ 
+        </div>
+
+ 
+        <!-- REFERENCES -->
+ 
+        <div class="science-info-card">
+ 
+            <h3>📚 References</h3>
+ 
+            <p class="reference-note">
+                Scientific information is based on botanical and
+                scientific reference sources. References will be
+                presented in APA 7th edition format.
+            </p>
+ 
+            <div class="references-list">
+ 
+                <p>
+                    1. Royal Botanic Gardens, Kew.
+                    <em>
+                        Plants of the World Online:
+                        Moringa oleifera Lam.
+                    </em>
+                </p>
+ 
+                <p>
+                    2. Royal Botanic Gardens, Kew.
+                    <em>
+                        Plants of the World Online:
+                        Moringa oleifera Lam. — General Information.
+                    </em>
+                </p>
+ 
+                <p>
+                    3. Govaerts, R., Nic Lughadha, E., Black, N.,
+                    Turner, R., & Paton, A. (2021).
+                    The World Checklist of Vascular Plants.
+                </p>
+ 
+            </div>
+ 
+        </div>
+ 
+    </div>
+ 
+</section>
+<!-- =========================
+             SECTION 4
+             LOCATION
+             ========================= -->
+<section id="location" class="content-section">
+ 
+    <div class="section-header">
+ 
+        <span class="section-number">03</span>
+ 
+        <div>
+            <p class="section-label">GEO-DOCUMENTATION</p>
+            <h2>Planting Location</h2>
+        </div>
+ 
+    </div>
+ 
+    <div class="location-layout">
+ 
+        <!-- =========================
+     INTERACTIVE LEAFLET MAP
+     ========================= -->
+
+        <div class="tree-map-container">
+
+            <div id="treeMap"></div>
+
+        </div>
+
+ 
+        <div class="location-details">
+ 
+            <div class="location-card">
+ 
+                <h3>📍 Tree 1 Niyog</h3>
+ 
+                <p><strong>Location:</strong> Bagong Buhay, Victoria</p>
+                <p><strong>GPS:</strong> To be added</p>
+                <p><strong>Area Type:</strong> To be documented</p>
+ 
+            </div>
+ 
+            <div class="location-card">
+ 
+                <h3>📍 Tree 2 Malungay</h3>
+ 
+                <p><strong>Location:</strong> Alcate, Victoria</p>
+                <p><strong>GPS:</strong> To be added</p>
+                <p><strong>Area Type:</strong> To be documented</p>
+ 
+            </div>
+ 
+        </div>
+ 
+    </div>
+ 
+    <div class="about-feature">
+ 
+        <h3>🌎 About this location documentation</h3>
+ 
+        <p>
+            We will document the planting environment, nearby
+            landmarks, environmental suitability, community context,
+            GPS coordinates, and original site photographs.
+        </p>
+ 
+    </div>
+ 
+</section>
+<!-- =========================================================
+     GALLERY SECTION
+     ========================================================= -->
+
+<section id="gallery" class="content-section gallery-section">
+
+    <div class="gallery-background"></div>
+
+    <div class="gallery-leaf gallery-leaf-left">🌿</div>
+    <div class="gallery-leaf gallery-leaf-right">🌿</div>
+
+    <div class="gallery-content">
+
+        <!-- HEADER -->
+        <div class="gallery-header">
+
+            <div class="gallery-title-line">
+                <span></span>
+                <span class="gallery-leaf-icon">🌱</span>
+                <span></span>
+            </div>
+
+            <p class="gallery-label">DOCUMENTATION</p>
+
+            <h2>GALLERY</h2>
+
+            <h3>
+                Moments of Our Tree Planting Journey
+            </h3>
+
+            <p class="gallery-description">
+                Here are the photos documenting our tree planting
+                journey — from before planting, during the activity,
+                and after planting.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             TEJADA
+             ===================================================== -->
+
+        <div class="student-gallery-card">
+
+            <!-- STUDENT INFORMATION -->
+            <div class="student-gallery-info">
+
+                <div class="student-gallery-icon">
+                    👤
+                </div>
+
+                <p class="student-label">
+                    STUDENT 1
+                </p>
+
+                <h3>Tejada</h3>
+
+                <div class="student-divider"></div>
+
+                <div class="student-detail">
+                    <span>🌱</span>
+
+                    <div>
+                        <small>Tree Species</small>
+                        <strong>To be added</strong>
+                    </div>
+                </div>
+
+                <div class="student-detail">
+                    <span>📍</span>
+
+                    <div>
+                        <small>Location</small>
+                        <strong>To be added</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- PHOTOS -->
+            <div class="photo-timeline">
+
+                <!-- BEFORE -->
+                <div class="gallery-photo-card">
+
+                    <div class="gallery-photo">
+
+                        <img src="~/gallery/tejada-before.jpg"
+                             alt="Tejada before planting">
+
+                    </div>
+
+                    <div class="photo-info">
+
+                        <strong>
+                            📷 BEFORE
+                        </strong>
+
+                        <span>
+                            Planting preparation
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DURING -->
+                <div class="gallery-photo-card">
+
+                    <div class="gallery-photo">
+
+                        <img src="~/gallery/tejada-during.jpg"
+                             alt="Tejada during planting">
+
+                    </div>
+
+                    <div class="photo-info">
+
+                        <strong>
+                            📷 DURING
+                        </strong>
+
+                        <span>
+                            Tree planting activity
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AFTER -->
+                <div class="gallery-photo-card">
+
+                    <div class="gallery-photo">
+
+                        <img src="~/gallery/tejada-after.jpg"
+                             alt="Tejada after planting">
+
+                    </div>
+
+                    <div class="photo-info">
+
+                        <strong>
+                            📷 AFTER
+                        </strong>
+
+                        <span>
+                            After planting
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             FABITO
+             ===================================================== -->
+
+        <div class="student-gallery-card">
+
+            <!-- STUDENT INFORMATION -->
+            <div class="student-gallery-info">
+
+                <div class="student-gallery-icon">
+                    👤
+                </div>
+
+                <p class="student-label">
+                    STUDENT 2
+                </p>
+
+                <h3>Fabito</h3>
+
+                <div class="student-divider"></div>
+
+                <div class="student-detail">
+                    <span>🌱</span>
+
+                    <div>
+                        <small>Tree Species</small>
+                        <strong>To be added</strong>
+                    </div>
+                </div>
+
+                <div class="student-detail">
+                    <span>📍</span>
+
+                    <div>
+                        <small>Location</small>
+                        <strong>To be added</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- PHOTOS -->
+            <div class="photo-timeline">
+
+                <!-- BEFORE -->
+                <div class="gallery-photo-card">
+
+                    <div class="gallery-photo">
+
+                        <div class="photo-placeholder">
+                            <img src="~/gallery/fabito-before.jpg"
+                                 alt="Fabito before planting">
+                        </div>
+
+                    </div>
+
+                    <div class="photo-info">
+
+                        <strong>
+                            📷 BEFORE
+                        </strong>
+
+                        <span>
+                            Planting preparation
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DURING -->
+                <div class="gallery-photo-card">
+
+                    <div class="gallery-photo">
+
+                        <div class="photo-placeholder">
+                            <img src="~/gallery/fabito-during.jpg"
+                                 alt="Fabito during planting">
+                        </div>
+
+                    </div>
+
+                    <div class="photo-info">
+
+                        <strong>
+                            📷 DURING
+                        </strong>
+
+                        <span>
+                            Tree planting activity
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AFTER -->
+                <div class="gallery-photo-card">
+
+                    <div class="gallery-photo">
+
+                        <div class="photo-placeholder">
+                            <img src="~/gallery/fabito-after.jpg"
+                                 alt="Fabito after planting">
+                        </div>
+
+                    </div>
+
+                    <div class="photo-info">
+
+                        <strong>
+                            📷 AFTER
+                        </strong>
+
+                        <span>
+                            After planting
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM -->
+        <div class="gallery-bottom">
+
+            <span></span>
+
+            SCIENCE
+            <b>•</b>
+            SUSTAINABILITY
+            <b>•</b>
+            GROWTH
+
+            <span></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+ 
+ 
+            
+<!-- =========================
+     SECTION 5
+     MONITORING LOG
+     ========================= -->
+
+<section id="monitoring" class="content-section">
+
+    <!-- SECTION HEADER -->
+    <div class="section-header">
+
+        <span class="section-number">04</span>
+
+        <div>
+            <p class="section-label">LONGITUDINAL DATA</p>
+
+            <h2>Monitoring Log</h2>
+
+            <p class="monitoring-header-description">
+                Track and document the growth and condition of each
+                planted tree throughout the project.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         TEJADA'S TREE
+         ========================= -->
+
+    <div class="tree-monitoring-card">
+
+        <div class="monitoring-card-header">
+
+            <div class="monitoring-tree-icon">
+                🌴
+            </div>
+
+            <div>
+                <span class="monitoring-student-label">
+                    STUDENT 1
+                </span>
+
+                <h3>Tejada's Tree</h3>
+
+                <p>
+                    Niyog / Coconut
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- TREE SUMMARY -->
+
+        <div class="monitoring-summary">
+
+            <div>
+                <span>🌱</span>
+
+                <small>Tree Species</small>
+
+                <strong>
+                    Coconut
+                </strong>
+            </div>
+
+
+            <div>
+                <span>📅</span>
+
+                <small>Planting Date</small>
+
+                <strong>
+                    To be added
+                </strong>
+            </div>
+
+
+            <div>
+                <span>📏</span>
+
+                <small>Initial Height</small>
+
+                <strong>
+                    To be added
+                </strong>
+            </div>
+
+
+            <div>
+                <span>🍃</span>
+
+                <small>Initial Leaves</small>
+
+                <strong>
+                    To be added
+                </strong>
+            </div>
+
+        </div>
+
+
+        <!-- MONITORING TABLE -->
+
+        <div class="monitoring-table-wrapper">
+
+            <table class="tree-monitoring-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Monitoring</th>
+                        <th>Date</th>
+                        <th>Height (cm)</th>
+                        <th>Leaves</th>
+                        <th>Condition</th>
+                        <th>Observation</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <strong>Baseline</strong>
+                            <small>Entry 1</small>
+                        </td>
+
+                        <td>09-20-2026</td>
+
+                        <td>158cm</td>
+
+                        <td>16</td>
+
+                        <td>
+                            <span class="monitor-status">
+                                Good Condition
+                            </span>
+                        </td>
+
+                        <td>—</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Mid-Semester</strong>
+                            <small>Entry 2</small>
+                        </td>
+
+                        <td>—</td>
+
+                        <td>—</td>
+
+                        <td>—</td>
+
+                        <td>
+                            <span class="monitor-status">
+                                To be recorded
+                            </span>
+                        </td>
+
+                        <td>—</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Final</strong>
+                            <small>Entry 3</small>
+                        </td>
+
+                        <td>—</td>
+
+                        <td>—</td>
+
+                        <td>—</td>
+
+                        <td>
+                            <span class="monitor-status">
+                                To be recorded
+                            </span>
+                        </td>
+
+                        <td>—</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         FABITO'S TREE
+         ========================= -->
+
+    <div class="tree-monitoring-card">
+
+        <div class="monitoring-card-header">
+
+            <div class="monitoring-tree-icon">
+                🌿
+            </div>
+
+            <div>
+
+                <span class="monitoring-student-label">
+                    STUDENT 2
+                </span>
+
+                <h3>Fabito's Tree</h3>
+
+                <p>
+                    Malunggay / Moringa
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TREE SUMMARY -->
+
+        <div class="monitoring-summary">
+
+            <div>
+                <span>🌱</span>
+
+                <small>Tree Species</small>
+
+                <strong>
+                    Malunggay
+                </strong>
+            </div>
+
+
+            <div>
+                <span>📅</span>
+
+                <small>Planting Date</small>
+
+                <strong>
+                    To be added
+                </strong>
+            </div>
+
+
+            <div>
+                <span>📏</span>
+
+                <small>Initial Height</small>
+
+                <strong>
+                    To be added
+                </strong>
+            </div>
+
+
+            <div>
+                <span>🍃</span>
+
+                <small>Initial Leaves</small>
+
+                <strong>
+                    To be added
+                </strong>
+            </div>
+
+        </div>
+
+
+        <!-- MONITORING TABLE -->
+
+        <div class="monitoring-table-wrapper">
+
+            <table class="tree-monitoring-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Monitoring</th>
+                        <th>Date</th>
+                        <th>Height (cm)</th>
+                        <th>Leaves</th>
+                        <th>Condition</th>
+                        <th>Observation</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <strong>Baseline</strong>
+                            <small>Entry 1</small>
+                        </td>
+
+                        <td>09-15-2026</td>
+
+                        <td>150cm</td>
+
+                        <td>30</td>
+
+                        <td>
+                            <span class="monitor-status">
+                                Good Condition
+                            </span>
+                        </td>
+
+                        <td>—</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Mid-Semester</strong>
+                            <small>Entry 2</small>
+                        </td>
+
+                        <td>—</td>
+
+                        <td>—</td>
+
+                        <td>—</td>
+
+                        <td>
+                            <span class="monitor-status">
+                                To be recorded
+                            </span>
+                        </td>
+
+                        <td>—</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Final</strong>
+                            <small>Entry 3</small>
+                        </td>
+
+                        <td>—</td>
+
+                        <td>—</td>
+
+                        <td>—</td>
+
+                        <td>
+                            <span class="monitor-status">
+                                To be recorded
+                            </span>
+                        </td>
+
+                        <td>—</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         WHAT WE TRACK
+         ========================= -->
+
+    <div class="monitoring-info-box">
+
+        <div class="monitoring-info-icon">
+            📊
+        </div>
+
+        <div>
+
+            <h3>
+                What We Track
+            </h3>
+
+            <p>
+                Each monitoring entry records important changes
+                in the trees throughout the project.
+            </p>
+
+            <div class="tracking-tags">
+
+                <span>📏 Height (cm)</span>
+
+                <span>🍃 Number of Leaves</span>
+
+                <span>🌿 Branches</span>
+
+                <span>🌱 Condition</span>
+
+                <span>👀 Observations</span>
+
+                <span>📸 Photos</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+ 
+<!-- =========================
+             SECTION 6
+             WHY IT MATTERS
+             ========================= -->
+
+<section id="matters" class="content-section">
+
+    <div class="section-header">
+        <span class="section-number">05</span>
+        <div>
+            <p class="section-label">ADVOCACY & SDGs</p>
+            <h2>Why It Matters</h2>
+        </div>
+    </div>
+
+    <!-- MAIN MESSAGE -->
+    <div class="matters-hero">
+        <div class="matters-hero-content">
+            <span class="big-icon">🌎</span>
+
+            <h3>
+                One tree may be small,
+                <br />
+                but environmental action starts with small steps.
+            </h3>
+
+            <p>
+                Tree planting is more than simply putting a seedling into the soil.
+                Trees are part of ecosystems that provide habitat, help protect soil,
+                support biodiversity, and participate in the movement of carbon
+                through the environment.
+            </p>
+
+            <p>
+                Our project allows us to observe these ideas directly by planting
+                two trees and monitoring their growth over time.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- PHILIPPINE ENVIRONMENTAL CONTEXT -->
+    <div class="impact-data">
+
+        <div class="impact-title">
+            <p class="section-label">PHILIPPINE ENVIRONMENTAL CONTEXT</p>
+            <h3>Why Forests and Trees Matter in the Philippines</h3>
+        </div>
+
+        <div class="impact-grid">
+
+            <div class="impact-card">
+                <span class="impact-icon">🌳</span>
+
+                <h4>7.01 Million Hectares</h4>
+
+                <p>
+                    Based on the 2015 land cover information cited by the
+                    Department of Environment and Natural Resources (DENR),
+                    the Philippines had approximately 7.01 million hectares
+                    of forest area.
+                </p>
+            </div>
+
+
+            <div class="impact-card">
+                <span class="impact-icon">📊</span>
+
+                <h4>About 23% of Land Area</h4>
+
+                <p>
+                    The same DENR report states that the country's remaining
+                    forest area represented approximately 23% of the total
+                    Philippine land area in 2015.
+                </p>
+            </div>
+
+
+            <div class="impact-card">
+                <span class="impact-icon">🌱</span>
+
+                <h4>Protection and Restoration</h4>
+
+                <p>
+                    Protecting and restoring forests can support biodiversity,
+                    ecosystem services, soil protection, and the long-term
+                    health of natural environments.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- SDG CONNECTION -->
+    <div class="sdg-section">
+
+        <div class="impact-title">
+            <p class="section-label">SUSTAINABLE DEVELOPMENT GOALS</p>
+
+            <h3>
+                Our Tree Planting and the SDGs
+            </h3>
+
+            <p>
+                Our project connects with two Sustainable Development Goals
+                that focus on environmental protection and climate action.
+            </p>
+        </div>
+
+
+        <div class="sdg-grid">
+
+            <!-- SDG 13 -->
+            <div class="sdg-card">
+
+                <span class="sdg-icon">🌡️</span>
+
+                <h3>SDG 13</h3>
+
+                <strong>Climate Action</strong>
+
+                <p>
+                    SDG 13 calls for action to address climate change and
+                    its impacts. Trees are connected to climate processes
+                    because they absorb carbon dioxide during photosynthesis
+                    and store carbon in their biomass.
+                </p>
+
+                <div class="sdg-connection">
+                    <strong>Our connection:</strong>
+
+                    <span>
+                        We will monitor our planted trees and document their
+                        growth instead of simply planting them and leaving
+                        them unattended.
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- SDG 15 -->
+            <div class="sdg-card">
+
+                <span class="sdg-icon">🌳</span>
+
+                <h3>SDG 15</h3>
+
+                <strong>Life on Land</strong>
+
+                <p>
+                    SDG 15 focuses on protecting, restoring, and promoting
+                    the sustainable use of terrestrial ecosystems, including
+                    forests and biodiversity.
+                </p>
+
+                <div class="sdg-connection">
+                    <strong>Our connection:</strong>
+
+                    <span>
+                        By caring for planted trees and observing their
+                        condition, our project encourages responsible
+                        stewardship of living organisms and the environment.
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHAT OUR PROJECT DOES -->
+    <div class="project-impact">
+
+        <div class="impact-title">
+            <p class="section-label">FROM PLANTING TO ACTION</p>
+
+            <h3>What We Can Do</h3>
+        </div>
+
+        <div class="action-grid">
+
+            <div class="action-card">
+                <span>🌱</span>
+
+                <h4>Plant</h4>
+
+                <p>
+                    Plant trees that are appropriate for their environment
+                    and location.
+                </p>
+            </div>
+
+
+            <div class="action-card">
+                <span>💧</span>
+
+                <h4>Care</h4>
+
+                <p>
+                    Provide proper care and observe the condition of the
+                    planted trees.
+                </p>
+            </div>
+
+
+            <div class="action-card">
+                <span>📏</span>
+
+                <h4>Monitor</h4>
+
+                <p>
+                    Record measurements such as height, leaves, branches,
+                    condition, and observations.
+                </p>
+            </div>
+
+
+            <div class="action-card">
+                <span>📸</span>
+
+                <h4>Document</h4>
+
+                <p>
+                    Use photographs and records to show how the trees
+                    change over time.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CALL TO ACTION -->
+    <div class="call-to-action">
+
+        <span class="cta-icon">🌿</span>
+
+        <h3>Our Call to Action</h3>
+
+        <p>
+            Environmental action does not end after planting a tree.
+            We encourage students and members of the community to learn
+            about their local environment, care for planted trees,
+            document their progress, and participate in responsible
+            environmental activities.
+        </p>
+
+        <div class="cta-highlight">
+            <strong>
+                Plant it. Care for it. Monitor it. Make it matter.
+            </strong>
+        </div>
+
+    </div>
+
+
+    <!-- SOURCES -->
+    <div class="matters-sources">
+
+        <h3>Sources</h3>
+
+        <p>
+            Department of Environment and Natural Resources (DENR).
+            <em>DENR Annual Report for FY 2021.</em>
+        </p>
+
+        <p>
+            Philippine Statistics Authority (PSA).
+            <em>Sustainable Development Goals – Philippine SDG Indicators.</em>
+        </p>
+
+        <p>
+            Climate Change Commission.
+            <em>Philippine Greenhouse Gas Inventory Management and Reporting System.</em>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SECTION 7 - FREE CHOICE FEATURE
+     ========================================= -->
+
+<section id="feature" class="content-section">
+
+    <div class="section-header">
+        <span class="section-number">06</span>
+
+        <div>
+            <p class="section-label">OUR CREATIVE FEATURE</p>
+            <h2>Tree Growth Dashboard</h2>
+        </div>
+    </div>
+
+
+    <!-- DASHBOARD INTRO -->
+
+    <div class="feature-hero">
+
+        <div class="feature-icon">📈</div>
+
+        <h3>Interactive Tree Growth Tracker</h3>
+
+        <p>
+            This dashboard transforms our monitoring records into
+            easy-to-understand visual information. It allows us to
+            observe how the trees change throughout the project.
+        </p>
+
+    </div>
+
+
+    <!-- TREE SELECTOR -->
+
+    <div class="tree-selector">
+
+        <h3>🌱 Select a Tree</h3>
+
+        <div class="tree-selector-buttons">
+
+            <button class="tree-select-btn active"
+                    onclick="selectDashboardTree('tejada', this)">
+                🌴 Tejada's Tree
+            </button>
+
+            <button class="tree-select-btn"
+                    onclick="selectDashboardTree('fabito', this)">
+                🌿 Fabito's Tree
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- TREE DASHBOARD -->
+
+    <div id="tejadaDashboard" class="dashboard-content active-dashboard">
+
+        <div class="dashboard-title">
+
+            <p class="section-label">TREE 1</p>
+
+            <h3>🌴 Tejada's Tree</h3>
+
+            <p>
+                Growth records will be displayed here based on the
+                monitoring data collected throughout the project.
+            </p>
+
+        </div>
+
+
+        <!-- SUMMARY CARDS -->
+
+        <div class="growth-summary">
+
+            <div class="growth-stat">
+                <span>📏</span>
+                <small>Initial Height</small>
+                <strong id="tejadaInitialHeight">-</strong>
+            </div>
+
+            <div class="growth-stat">
+                <span>🌱</span>
+                <small>Latest Height</small>
+                <strong id="tejadaLatestHeight">—</strong>
+            </div>
+
+            <div class="growth-stat">
+                <span>📈</span>
+                <small>Total Growth</small>
+                <strong id="tejadaGrowth">—</strong>
+            </div>
+
+            <div class="growth-stat">
+                <span>🍃</span>
+                <small>Latest Leaves</small>
+                <strong id="tejadaLeaves">—</strong>
+            </div>
+
+        </div>
+
+
+        <!-- CHART -->
+
+        <div class="growth-chart-card">
+
+            <div class="chart-header">
+
+                <div>
+                    <p class="section-label">HEIGHT MONITORING</p>
+                    <h3>Height Growth</h3>
+                </div>
+
+                <span>cm</span>
+
+            </div>
+
+            <div class="chart-container">
+
+                <canvas id="tejadaGrowthChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO TIMELINE -->
+
+        <div class="photo-timeline">
+
+            <div class="timeline-title">
+
+                <p class="section-label">VISUAL DOCUMENTATION</p>
+
+                <h3>Photo Timeline</h3>
+
+            </div>
+
+
+            <div class="timeline-grid">
+
+                <div class="timeline-photo">
+
+                    <img src="~/feature/entry1.jpg"
+                         alt="Tree Growth Entry 1"
+                         class="timeline-entry-photo">
+
+                    <strong>Entry 1</strong>
+
+                    <span>Initial Photo</span>
+
+                </div>
+
+
+                <div class="timeline-photo">
+
+                    <div class="photo-placeholder">
+                        📷
+                    </div>
+
+                    <strong>Entry 2</strong>
+
+                    <span>Mid-Semester</span>
+
+                </div>
+
+
+                <div class="timeline-photo">
+
+                    <div class="photo-placeholder">
+                        📷
+                    </div>
+
+                    <strong>Entry 3</strong>
+
+                    <span>Final Photo</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FABITO DASHBOARD -->
+
+    <div id="fabitoDashboard" class="dashboard-content">
+
+        <div class="dashboard-title">
+
+            <p class="section-label">TREE 2</p>
+
+            <h3>🌿 Fabito's Tree</h3>
+
+            <p>
+                Growth records will be displayed here based on the
+                monitoring data collected throughout the project.
+            </p>
+
+        </div>
+
+
+        <!-- SUMMARY CARDS -->
+
+        <div class="growth-summary">
+
+            <div class="growth-stat">
+                <span>📏</span>
+                <small>Initial Height</small>
+                <strong id="fabitoInitialHeight">—</strong>
+            </div>
+
+            <div class="growth-stat">
+                <span>🌱</span>
+                <small>Latest Height</small>
+                <strong id="fabitoLatestHeight">—</strong>
+            </div>
+
+            <div class="growth-stat">
+                <span>📈</span>
+                <small>Total Growth</small>
+                <strong id="fabitoGrowth">—</strong>
+            </div>
+
+            <div class="growth-stat">
+                <span>🍃</span>
+                <small>Latest Leaves</small>
+                <strong id="fabitoLeaves">—</strong>
+            </div>
+
+        </div>
+
+
+        <!-- CHART -->
+
+        <div class="growth-chart-card">
+
+            <div class="chart-header">
+
+                <div>
+                    <p class="section-label">HEIGHT MONITORING</p>
+                    <h3>Height Growth</h3>
+                </div>
+
+                <span>cm</span>
+
+            </div>
+
+            <div class="chart-container">
+
+                <canvas id="fabitoGrowthChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO TIMELINE -->
+
+        <div class="photo-timeline">
+
+            <div class="timeline-title">
+
+                <p class="section-label">VISUAL DOCUMENTATION</p>
+
+                <h3>Photo Timeline</h3>
+
+            </div>
+
+
+            <div class="timeline-grid">
+
+                <div class="timeline-photo">
+
+                    <img src="~/feature/fabito-entry1.jpg"
+                         alt="Tree Growth Entry 1"
+                         class="timeline-entry-photo">
+
+                    <strong>Entry 1</strong>
+
+                    <span>Initial Photo</span>
+
+                </div>
+
+
+                <div class="timeline-photo">
+
+                    <div class="photo-placeholder">
+                        📷
+                    </div>
+
+                    <strong>Entry 2</strong>
+
+                    <span>Mid-Semester</span>
+
+                </div>
+
+
+                <div class="timeline-photo">
+
+                    <div class="photo-placeholder">
+                        📷
+                    </div>
+
+                    <strong>Entry 3</strong>
+
+                    <span>Final Photo</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HOW IT WORKS -->
+
+    <div class="about-feature">
+
+        <h3>💡 About this Feature</h3>
+
+        <p>
+            The Tree Growth Dashboard is our free-choice feature.
+            It connects our tree-planting project to citizen science
+            by turning observations and measurements into visual
+            information.
+        </p>
+
+        <p>
+            Both students contribute to the collection,
+            organization, and presentation of the growth data.
+        </p>
+
+    </div>
+
+</section>
+ 
+</main>
+
+ 
+<!-- FOOTER -->
+<footer class="site-footer">
+ 
+    <div>
+        <strong>
+            TEJADA & FABITO</strong>
+        <p> Web Platform</p>
+    </div>
+ 
+    <div>
+        <p>SOC SCI 113 — Science, Technology, and Society</p>
+        <p>Mindoro State University • College of Computer Studies</p>
+    </div>
+ 
+</footer>
+ 
+</div>
+<!-- =========================================
+     LEAFLET MAP
+     ========================================= -->
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+
+    // =========================================
+    // TREE LOCATION MAP
+    // =========================================
+
+    let treeMap = null;
+
+
+    function initializeTreeMap() {
+
+    // Prevent the map from being initialized twice
+    if (treeMap !== null) {
+    treeMap.invalidateSize();
+    return;
+    }
+
+
+    // =====================================
+    // TEMPORARY COORDINATES
+    // PALITAN NATIN ITO PAG MAY ACTUAL GPS
+    // =====================================
+
+    const tree1Location = [13.19800, 121.19833];
+
+    const tree2Location = [13.176599, 121.187822];
+
+
+    // =====================================
+    // CREATE MAP
+    // =====================================
+
+    treeMap = L.map("treeMap").setView(
+    tree1Location,
+    16
+    );
+
+
+    // =====================================
+    // OPENSTREETMAP TILES
+    // =====================================
+
+    L.tileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+    attribution:
+    "&copy; OpenStreetMap contributors"
+    }
+    ).addTo(treeMap);
+
+
+    // =====================================
+    // TREE 1 MARKER
+    // =====================================
+
+    const tree1 = L.marker(tree1Location)
+    .addTo(treeMap);
+
+
+    tree1.bindPopup(`
+    <div style="text-align:center;">
+    <h3>🌴 Tree 1</h3>
+    <p><strong>Student:</strong> Tejada</p>
+    <p><strong>Tree:</strong> Niyog / Coconut</p>
+    <p><strong>GPS:</strong><br>
+    13.1976470, 121.1983509</p>
+    </div>
+    `);
+
+
+    // =====================================
+    // TREE 2 MARKER
+    // =====================================
+
+    const tree2 = L.marker(tree2Location)
+    .addTo(treeMap);
+
+
+    tree2.bindPopup(`
+    <div style="text-align:center;">
+    <h3>🌿 Tree 2</h3>
+    <p><strong>Student:</strong> Fabito</p>
+    <p><strong>Tree:</strong> Malunggay / Moringa</p>
+    <p><strong>GPS:</strong><br>
+    13.1980000, 121.1990000</p>
+    </div>
+    `);
+
+    }
+
+
+    // =========================================
+    // INITIALIZE WHEN LOCATION IS OPENED
+    // =========================================
+
+    function openTreeMap() {
+
+    setTimeout(function () {
+
+    initializeTreeMap();
+
+    if (treeMap !== null) {
+    treeMap.invalidateSize();
+    }
+
+    }, 200);
+
+    }
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
